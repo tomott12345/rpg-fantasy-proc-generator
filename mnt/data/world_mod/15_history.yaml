@@ -1,0 +1,9 @@
+history:
+  eras:
+  - name: Age of Sparks
+    start_bp: 500
+    events:
+    - year_bp: 470
+      summary: First ember-engine launched a sky-barge.
+    - year_bp: 120
+      summary: Riftquakes exposed the Sunken Spire.

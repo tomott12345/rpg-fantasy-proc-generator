@@ -1,0 +1,14 @@
+factions:
+- id: tinker_guild
+  name: Guild of Emberwrights
+  type: guild
+  goals:
+  - corner_steam_exports
+  - recover_relic_schematics
+  resources:
+  - workshops
+  - scrip
+  - smugglers
+  reputation:
+    public: mixed
+    underworld: favored

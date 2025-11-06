@@ -1,0 +1,11 @@
+npcs:
+- id: ivory-fox
+  archetype: performer
+  role: fixer
+  traits:
+  - charismatic
+  - calculating
+  bonds:
+  - tinker_guild
+  secrets:
+  - owes_debt_to_smugglers

@@ -1,0 +1,19 @@
+settlements:
+- id: port_verdan
+  name: Port Verdan
+  type: city
+  population: 48000
+  region: coastlands
+  culture: marosi
+  government: council_oligarchy
+  economy:
+  - shipwrights
+  - spice
+  - artificing
+  districts:
+  - name: Green Quay
+    notes: Kelp markets; salvage auctions every third tide.
+  problems:
+  - smog
+  - guild_strikes
+  - missing_dockhands

@@ -1,0 +1,11 @@
+dungeons:
+- id: spire-01
+  name: The Sunken Spire
+  type: ancient_tower
+  depth: 5
+  tags:
+  - arcane
+  - flooded
+  boss_seeds:
+  - astral_specter
+  - clockwork_warden

@@ -1,0 +1,9 @@
+bestiary:
+- id: clockwork_warden
+  cr: 5
+  habitats:
+  - ruins
+  - workshops
+  tags:
+  - construct
+  - guardian

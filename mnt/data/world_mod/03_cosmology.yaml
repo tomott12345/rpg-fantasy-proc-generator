@@ -1,0 +1,40 @@
+cosmology:
+  planes:
+  - id: prime
+    name: Prime Material
+    traits:
+    - mundane_physics
+    - thin_veils
+  - id: ember
+    name: Emberwild
+    traits:
+    - fire_aspect
+    - passion
+    - volatile
+  deities:
+  - id: ukobach
+    name: Ukobach
+    domain:
+    - fire
+    - innovation
+    alignment: CN
+    symbols:
+    - oil_lamp
+    - cog
+    worship:
+      centers:
+      - industrial_ports
+      - tinker_guilds
+      strictures:
+      - offer_sparks
+      - never_waste_fuel
+  magic:
+    sources:
+    - ley
+    - divine
+    - pact
+    - relic
+    density: medium
+    hazards:
+    - wild_surge
+    - arcane_radiation

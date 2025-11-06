@@ -1,0 +1,23 @@
+names:
+  syllables:
+    start:
+    - Var
+    - Mar
+    - Tho
+    - Dar
+    - Ela
+    mid:
+    - os
+    - an
+    - ir
+    - um
+    - eth
+    end:
+    - a
+    - 'on'
+    - is
+    - ar
+    - e
+  patterns:
+  - start-mid-end
+  - start-end

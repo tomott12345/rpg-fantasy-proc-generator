@@ -1,0 +1,11 @@
+species:
+- id: human
+  playable: true
+  variants:
+  - marosi
+  - riftborn
+- id: dwarf
+  playable: true
+  variants:
+  - stoneheart
+  - emberforged

@@ -1,0 +1,26 @@
+encounters:
+  region_bands:
+    riftmarch:
+      day:
+        easy: 50
+        medium: 100
+        hard: 150
+        deadly: 200
+      night:
+        easy: 70
+        medium: 120
+        hard: 170
+        deadly: 230
+  spawn_tables:
+  - region: riftmarch
+    biome: badlands
+    entries:
+    - weight: 3
+      creature: bandits
+      cr: 0.5
+    - weight: 1
+      creature: clockwork_warden
+      cr: 5
+    - weight: 2
+      creature: ash_wolves
+      cr: 2

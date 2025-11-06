@@ -1,0 +1,43 @@
+geography:
+  world_size: medium
+  tectonics: moderate
+  climate_bands:
+  - polar
+  - temperate
+  - arid
+  - tropical
+  continents:
+  - id: thal
+    name: Thal’Varra
+    notes: Rift-scarred interior; ley confluence to the east.
+    regions:
+    - id: riftmarch
+      biome: badlands
+      tags:
+      - ruins
+      - banditry
+      - ancient_rifts
+      landmarks:
+      - id: sunken_spire
+        type: ruin
+        hooks:
+        - sealed_door
+        - astral_echoes
+    - id: coastlands
+      biome: coast
+      tags:
+      - trade
+      - fishing
+      - fog
+    - id: high_vale
+      biome: mountains
+      tags:
+      - fortresses
+      - mines
+      - snow_passes
+    - id: ash_desert
+      biome: desert
+      tags:
+      - black_sand
+      - glass_flats
+      - heat_mirages

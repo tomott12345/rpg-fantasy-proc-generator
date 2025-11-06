@@ -1,0 +1,4 @@
+house_rules:
+  exploration_turn_minutes: 10
+  short_rest_minutes: 60
+  identify_rule: ritual_only

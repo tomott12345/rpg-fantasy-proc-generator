@@ -1,0 +1,12 @@
+calendar:
+  days_per_week: 7
+  months:
+  - name: Firstlight
+    days: 30
+  festivals:
+  - name: Emberwake
+    month: Firstlight
+    day: 15
+    effects:
+    - +10% fire_magic
+    - markets_open_all_night

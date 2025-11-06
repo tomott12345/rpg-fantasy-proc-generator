@@ -1,0 +1,22 @@
+loot:
+  coinage:
+  - copper
+  - silver
+  - electrum
+  - gold
+  - platinum
+  bundles:
+    poor:
+      dice: 2d10
+      unit: silver
+    standard:
+      dice: 3d10
+      unit: gold
+    rich:
+      dice: 4d12
+      unit: gold
+  magic_rolls:
+    common: 60
+    uncommon: 30
+    rare: 9
+    very_rare: 1

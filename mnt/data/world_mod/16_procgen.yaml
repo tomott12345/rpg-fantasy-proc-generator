@@ -1,0 +1,133 @@
+procgen:
+  global:
+    density:
+      settlements: 0.8
+      dungeons: 1.2
+      factions: 1.0
+    difficulty_baseline: standard
+    encounter_frequency: moderate
+  constraints:
+  - rule: at_least_one_port_per_coast_region
+  - rule: each_settlement_has_2_to_4_problems
+  - rule: pantheon_members_used_by_cultures
+  - rule: no_duplicate_names_across_namespaces
+  weights:
+    regions:
+      riftmarch: 3
+      coastlands: 2
+      high_vale: 1
+      ash_desert: 1
+    biomes:
+      forest: 2
+      mountains: 2
+      plains: 3
+      swamp: 1
+      desert: 1
+      badlands: 1
+      coast: 3
+    climates:
+      polar: 0
+      temperate: 4
+      arid: 2
+      tropical: 2
+    settlement_types:
+      hamlet: 3
+      village: 5
+      town: 4
+      city: 2
+      capital: 1
+    dungeon_themes:
+      ruin_arcane: 3
+      cavern_natural: 2
+      tomb_cursed: 2
+      fortress_fallen: 2
+      hive_chthonic: 1
+  dice:
+    settlement_population_by_type:
+      hamlet: 3d6*10
+      village: 5d10*10
+      town: 8d12*50
+      city: 10d20*100
+      capital: 12d20*200
+    treasure_tier_by_cr:
+      0-2: 1d4
+      3-6: 1d6
+      7-10: 1d8
+      11-14: 1d10
+      15+: 1d12
+  tables:
+  - id: hook_types
+    description: Adventure hook archetypes
+    entries:
+    - weight: 3
+      result:
+        type: missing_person
+        twist: is_the_villain
+    - weight: 2
+      result:
+        type: escort
+        twist: cargo_is_cursed
+    - weight: 2
+      result:
+        type: heist
+        twist: patron_betrayal
+    - weight: 1
+      result:
+        type: monster_hunt
+        twist: monster_is_sapient
+  - id: complication
+    entries:
+    - weight: 2
+      result: A rival faction interferes.
+    - weight: 1
+      result: A storm closes roads and ports.
+    - weight: 1
+      result: Ancient ward awakens.
+  generators:
+    settlement:
+      steps:
+      - choose:
+          region: '@weights.regions'
+          biome: '@weights.biomes'
+          type: '@weights.settlement_types'
+      - roll:
+          population: '@dice.settlement_population_by_type[{{type}}]'
+      - pick_n:
+          problems:
+            from:
+            - smuggling_ring
+            - plague
+            - tax_strike
+            - cult_activity
+            - beast_attacks
+            n: 1d2+1
+      - derive:
+          defense_rating: case(type, {'hamlet':1,'village':2,'town':3,'city':4,'capital':5})
+          market_size: case(type, {'hamlet':'tiny','village':'small','town':'medium','city':'large','capital':'grand'})
+    dungeon:
+      steps:
+      - choose:
+          region: '@weights.regions'
+          theme: '@weights.dungeon_themes'
+      - roll:
+          depth: 1d4+2
+      - derive:
+          cr_guess: max(1, depth - 1)
+    quest:
+      steps:
+      - choose:
+          region: '@weights.regions'
+      - derive:
+          cr_guess: case(difficulty_baseline, {'easy':1,'standard':3,'hard':6,'grim':8},
+            3)
+      - table: hook_types
+      - table: complication
+      - bind:
+          reward: treasure_tier_by_cr(cr_guess)
+      - output_template: '{{hook.type|title}} in {{region|title}}: {{hook.twist}}.
+
+          Complication: {{complication}}
+
+          Reward Tier: {{reward}}.
+
+          '

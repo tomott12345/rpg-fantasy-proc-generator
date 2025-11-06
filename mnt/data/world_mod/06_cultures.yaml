@@ -1,0 +1,22 @@
+cultures:
+- id: marosi
+  name: Marosi Freeholds
+  descriptors:
+  - maritime
+  - mercantile
+  - pragmatic
+  language: Marosi Trade Cant
+  typical_alignment: N
+  tech_level: late_medieval
+  pantheon:
+  - ukobach
+  aesthetics:
+  - salt-stained_oak
+  - brasswork
+  - naval_tattoos
+  taboos:
+  - spill_freshwater_at_sea
+  traits:
+    seafaring: 3
+    bargaining: 2
+    horsemanship: 0
