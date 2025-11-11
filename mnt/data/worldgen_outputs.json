@@ -1,0 +1,36 @@
+{
+  "settlement": {
+    "now": "2025-11-11T20:31:46.971403",
+    "region": "high_vale",
+    "biome": "coast",
+    "type": "hamlet",
+    "population": 90,
+    "problems": [],
+    "defense_rating": 1,
+    "market_size": "tiny"
+  },
+  "dungeon": {
+    "now": "2025-11-11T20:31:46.971496",
+    "region": "ash_desert",
+    "theme": "ruin_arcane",
+    "depth": 3,
+    "cr_guess": 2
+  },
+  "quest": {
+    "now": "2025-11-11T20:31:46.971525",
+    "region": "riftmarch",
+    "difficulty_baseline": "standard",
+    "cr_guess": 3,
+    "hook_types": {
+      "type": "missing_person",
+      "twist": "is_the_villain"
+    },
+    "hook": {
+      "type": "missing_person",
+      "twist": "is_the_villain"
+    },
+    "complication": "A rival faction interferes.",
+    "reward": "1d6",
+    "output": "Missing_Person in Riftmarch: is_the_villain.\nComplication: A rival faction interferes.\nReward Tier: 1d6.\n"
+  }
+}

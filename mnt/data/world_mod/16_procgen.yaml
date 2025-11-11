@@ -117,6 +117,8 @@ procgen:
       steps:
       - choose:
           region: '@weights.regions'
+      - bind:
+          difficulty_baseline: lookup('procgen.global.difficulty_baseline')
       - derive:
           cr_guess: case(difficulty_baseline, {'easy':1,'standard':3,'hard':6,'grim':8},
             3)
