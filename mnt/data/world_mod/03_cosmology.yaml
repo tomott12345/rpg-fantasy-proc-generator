@@ -1,40 +1,530 @@
 cosmology:
   planes:
-  - id: prime
-    name: Prime Material
-    traits:
-    - mundane_physics
-    - thin_veils
-  - id: ember
-    name: Emberwild
-    traits:
-    - fire_aspect
-    - passion
-    - volatile
+    - id: prime
+      name: Prime Material
+      traits:
+        - mundane_physics
+        - thin_veils
+    - id: ember
+      name: Emberwild
+      traits:
+        - fire_aspect
+        - passion
+        - volatile
+
+  locations:
+    - id: auryn_spire
+      name: Auryn Spire
+      plane: prime
+      type: temple_city
+      associated_deities: [arlitha_ro, thalor]
+      notes: "Sun-drenched citadel where dawn rites to Arlitha and oaths to Thalor are sworn."
+    - id: veiled_basilica
+      name: Veiled Basilica
+      plane: prime
+      type: shadow_temple
+      associated_deities: [nikki_gerrian]
+      notes: "Hidden temple where candles burn black and secrets are traded for favors."
+    - id: heartwild_glade
+      name: Heartwild Glade
+      plane: prime
+      type: sacred_grove
+      associated_deities: [truella, feralas]
+      notes: "A living nexus of old growth where beasts and druids heed Truella's will."
+    - id: ember_crucible
+      name: Ember Crucible
+      plane: ember
+      type: volcanic_forge
+      associated_deities: [ukobach, drunmir]
+      notes: "A forge-city suspended over rivers of magma, sparks of Ukobach and craft of Drunmir mingling."
+    - id: moonwoven_sanctum
+      name: Moonwoven Sanctum
+      plane: prime
+      type: lunar_shrine
+      associated_deities: [lyrien]
+      notes: "High elven observatory-temple where starlight is woven into wards and prophecies."
+    - id: bone_visions_pit
+      name: Bone Visions Pit
+      plane: prime
+      type: shamanic_site
+      associated_deities: [shunaka]
+      notes: "An orcish ritual crater scattered with carved bones used for ancestral augury."
+
   deities:
-  - id: ukobach
-    name: Ukobach
-    domain:
-    - fire
-    - innovation
-    alignment: CN
-    symbols:
-    - oil_lamp
-    - cog
-    worship:
-      centers:
-      - industrial_ports
-      - tinker_guilds
+
+    # Human Pantheon
+    - id: arlitha_ro
+      name: Arlitha/Ro
+      race: human
+      plane: prime
+      domains: [light, virtue, renewal]
+      aspects:
+        - form: Arlitha
+          appearance: "Middle-aged woman in simple but fine robes embroidered with gold thread."
+          personality: "Firm, commanding, uncompromising."
+        - form: Ro
+          appearance: "A flamboyant youth in extravagant attire."
+          personality: "Playful, indulgent, whimsical."
+      followers: [paladins, priests, commonfolk]
+      symbol: "A sunburst split into gold and white."
+      sacred_sites: [auryn_spire]
+      orders: [order_radiant_dawn, circle_of_golden_road]
+
+    - id: truella
+      name: Truella
+      race: human
+      plane: prime
+      domains: [nature, balance, storms, beasts]
+      appearance: "A breathtaking wild-eyed woman radiating predatory beauty."
+      personality: "Calm but feral; violence withers in her presence."
+      symbol: "A waterfall encircled by brambles."
+      sacred_sites: [heartwild_glade]
+      orders: [circle_thorned_stream]
+
+    - id: nikki_gerrian
+      name: Nikki/Gerrian
+      race: human
+      plane: prime
+      domains: [darkness, secrets, ambition, shadow_magic]
+      aspects:
+        - form: Nikki
+          appearance: "Striking young woman with raven hair and robes of shifting black."
+          personality: "Quiet, intense, painfully charismatic."
+        - form: Gerrian
+          appearance: "Hooded man in peerless leather armor carrying an ordinary rapier."
+          personality: "Calculating, sardonic; fond of risk-laden questions."
+      symbol: "A black crescent eclipsing a silver star."
+      sacred_sites: [veiled_basilica]
+      orders: [cabal_inkblack_veil, brotherhood_last_gamble]
+
+    - id: thalor
+      name: Thalor, The Sacred Keeper
+      race: human
+      plane: prime
+      domains: [justice, courage, truth, protection, knowledge]
+      appearance: "Silver-armored giant holding a radiant sword and chained tome."
+      symbol: "A tome crossed with a radiant sword."
+      personality: "Stern, honorable, compassionate but uncompromising."
+      dogma:
+        - be_brave
+        - deliver_justice
+        - protect_innocent
+        - speak_truth
+        - seek_knowledge
+      sacred_sites: [auryn_spire]
+      orders: [order_luminous_chain, inquestors_of_sacred_tome]
+
+    # Angels
+    - id: selendriel
+      name: Selendriel, Herald of Dawns
+      type: angel
+      plane: prime
+      domains: [light, hope]
+      appearance: "A towering luminous being with wings like burning parchment."
+      personality: "Merciful but relentless against darkness."
+      legions: [legion_auroral_wings]
+      orders: [choir_first_light]
+
+    - id: vaerun
+      name: Vaerun, The Silent Watcher
+      type: angel
+      plane: prime
+      domains: [vigilance, time]
+      appearance: "A faceless guardian of bronze and clockwork feathers."
+      personality: "Speaks only in visions and warnings."
+      legions: [legion_timelocked_guard]
+      orders: [wardens_last_hour]
+
+    # Demons
+    - id: ukobach
+      name: Ukobach
+      type: demon
+      plane: ember
+      domains: [mischief, fire, sparks]
+      appearance: "Small red imp dripping embers and soot."
+      personality: "Eager to serve but dangerously literal."
       strictures:
-      - offer_sparks
-      - never_waste_fuel
+        - offer_sparks
+        - never_waste_fuel
+      courts: [court_cinder_spiral]
+
+    - id: marvash
+      name: Marvash the Withering Tongue
+      type: demon
+      plane: ember
+      domains: [corruption, rot, despair]
+      appearance: "A gaunt long-limbed demon whose voice rots wood and weakens resolve."
+      courts: [court_withering_word]
+
+    - id: kallithrex
+      name: Kallithrex, The Chain-Breaker
+      type: demon
+      plane: ember
+      domains: [rebellion, chaos]
+      appearance: "A horned warrior wreathed in broken chains that float like serpents."
+      courts: [court_shattered_fetters]
+
+    # Elven Pantheon
+    - id: lyrien
+      name: Lyrien the Moonweaver
+      race: elf
+      plane: prime
+      domains: [moon, dreams, starlight]
+      appearance: "Tall ethereal elf with starlit hair."
+      symbol: "A crescent moon woven with threads of silver."
+      sacred_sites: [moonwoven_sanctum]
+      orders: [weavers_silver_thread]
+
+    - id: feralas
+      name: Feralas, The Autumn Hunter
+      race: elf
+      plane: prime
+      domains: [forests, archery, cycles]
+      appearance: "Amber-eyed elf cloaked in falling leaves."
+      sacred_sites: [heartwild_glade]
+      orders: [order_crimson_leaf]
+
+    # Dwarven Pantheon
+    - id: drunmir
+      name: Drunmir Stonefather
+      race: dwarf
+      plane: prime
+      domains: [forge, oaths, mountains]
+      appearance: "Broad dwarf of molten stone and iron beard."
+      symbol: "A hammer striking an anvil-mountain."
+      sacred_sites: [ember_crucible]
+      orders: [forge_oathbound, keepers_deep_anvil]
+
+    - id: keldra
+      name: Keldra Mithrilheart
+      race: dwarf
+      plane: prime
+      domains: [family, craft, hearth]
+      appearance: "Matron dwarf with braids of mithril and glowing runes."
+      orders: [sisters_glowing_hearth]
+
+    # Gnomish Pantheon
+    - id: zippalux
+      name: Zippalux the Tinkersage
+      race: gnome
+      plane: prime
+      domains: [invention, luck, curiosity]
+      appearance: "A tiny gnome surrounded by hovering tools."
+      personality: "Chaotic, brilliant, loves accidents that become discoveries."
+      orders: [guild_clockwork_whim]
+
+    - id: merriby
+      name: Merriby of the Hidden Paths
+      race: gnome
+      plane: prime
+      domains: [illusions, secrecy, crossroads]
+      orders: [circle_hidden_turnings]
+
+    # Halfling Pantheon
+    - id: daleborn
+      name: Daleborn the Hearth Wanderer
+      race: halfling
+      plane: prime
+      domains: [home, travel, comfort]
+      appearance: "A barefoot wanderer with a pack full of endless supplies."
+      orders: [fellows_warm_road]
+
+    - id: tilda_brightcup
+      name: Tilda Brightcup
+      race: halfling
+      plane: prime
+      domains: [joy, luck, hospitality]
+      orders: [host_bright_table]
+
+    # Orcish Pantheon
+    - id: grathul
+      name: Grathul the Bloodwind
+      race: orc
+      plane: prime
+      domains: [war, storms, fury]
+      appearance: "A hulking orc god wreathed in thunderous clouds."
+      orders: [warband_thunder_skull]
+
+    - id: shunaka
+      name: Shunaka Bone-Seer
+      race: orc
+      plane: prime
+      domains: [spirits, ancestors, shamanism]
+      sacred_sites: [bone_visions_pit]
+      orders: [coven_white_bone]
+
+  factions:
+    - id: covenant_dawn
+      name: Covenant of Dawn
+      type: celestial
+      allegiance: arlitha_ro
+      goals:
+        - purge_undead
+        - spread_light
+        - safeguard_oaths
+      rivals: [cabal_inkblack_veil, court_withering_word]
+      symbols:
+        - "White cloaks trimmed in gold."
+    - id: cabal_inkblack_veil
+      name: Cabal of the Ink-Black Veil
+      type: shadow_cult
+      allegiance: nikki_gerrian
+      goals:
+        - hoard_secrets
+        - control_gambling_houses
+        - manipulate_nobility
+      rivals: [covenant_dawn, inquestors_sacred_tome]
+      symbols:
+        - "Black veils embroidered with silver crescents."
+    - id: concord_wild_oath
+      name: Concord of the Wild Oath
+      type: druidic_circle
+      allegiance: truella
+      goals:
+        - preserve_balance
+        - restrain_civilization_sprawl
+        - guard_primal_sites
+      symbols:
+        - "Twined antlers around a river-stone."
+
+  angelic_legions:
+    - id: legion_auroral_wings
+      name: Auroral Wings
+      patron: arlitha_ro
+      commander: selendriel
+      plane: prime
+      duties:
+        - herald_dawns
+        - cleanse_shadows
+        - guard_sacred_oaths
+      composition: "Radiant winged warriors and dawn-spirits."
+    - id: legion_timelocked_guard
+      name: Timelocked Guard
+      patron: thalor
+      commander: vaerun
+      plane: prime
+      duties:
+        - watch_thresholds
+        - warn_of_calamity
+        - guard_forbidden_tomes
+      composition: "Bronze-faced sentinels, clockwork seraphs, and archivist angels."
+
+  infernal_courts:
+    - id: court_cinder_spiral
+      name: Court of the Cinder Spiral
+      plane: ember
+      ruler: kallithrex
+      notable_demons: [ukobach]
+      domains: [fire, rebellion, industry]
+      customs:
+        - oaths_signed_in_embers
+        - bargains_for_fuel
+    - id: court_withering_word
+      name: Court of the Withering Word
+      plane: ember
+      ruler: marvash
+      notable_demons: []
+      domains: [decay, despair, curses]
+      customs:
+        - duels_of_insult
+        - decrees_spoken_to_rot_cities
+    - id: court_shattered_fetters
+      name: Court of Shattered Fetters
+      plane: ember
+      ruler: kallithrex
+      notable_demons: [marvash]
+      domains: [chains, revolution, slavery]
+      customs:
+        - chains_forged_then_broken
+        - slaves_pitted_against_masters
+
+  orders:
+    - id: order_radiant_dawn
+      name: Order of the Radiant Dawn
+      patron: arlitha_ro
+      type: knightly_order
+      base: auryn_spire
+      vows:
+        - defend_weak
+        - greet_each_dawn_in_prayer
+    - id: circle_of_golden_road
+      name: Circle of the Golden Road
+      patron: arlitha_ro
+      type: missionary_order
+      base: auryn_spire
+      vows:
+        - travel_light
+        - bring_light_to_distant_villages
+
+    - id: circle_thorned_stream
+      name: Circle of the Thorned Stream
+      patron: truella
+      type: druidic_circle
+      base: heartwild_glade
+      vows:
+        - blood_for_balance
+        - break_axes_that_bite_too_deep
+
+    - id: cabal_inkblack_veil
+      name: Cabal of the Ink-Black Veil
+      patron: nikki_gerrian
+      type: secret_society
+      base: veiled_basilica
+      vows:
+        - never_reveal_true_face
+        - secrets_are_currency
+
+    - id: brotherhood_last_gamble
+      name: Brotherhood of the Last Gamble
+      patron: nikki_gerrian
+      type: gamblers_guild
+      base: veiled_basilica
+      vows:
+        - embrace_risk
+        - never_bet_what_you_cannot_lose
+
+    - id: order_luminous_chain
+      name: Order of the Luminous Chain
+      patron: thalor
+      type: paladin_order
+      base: auryn_spire
+      vows:
+        - bind_self_to_truth
+        - stand_between_innocent_and_harm
+
+    - id: inquestors_sacred_tome
+      name: Inquestors of the Sacred Tome
+      patron: thalor
+      type: inquisition
+      base: auryn_spire
+      vows:
+        - root_out_corruption
+        - record_all_judgments
+
+    - id: choir_first_light
+      name: Choir of the First Light
+      patron: arlitha_ro
+      type: angelic_choir
+      base: auryn_spire
+      vows:
+        - sing_dawn_hymns
+        - shield_mortals_from_falling_stars
+
+    - id: wardens_last_hour
+      name: Wardens of the Last Hour
+      patron: thalor
+      type: timewardens
+      base: moonwoven_sanctum
+      vows:
+        - hold_the_line_at_worlds_end
+        - record_final_words
+
+    - id: weavers_silver_thread
+      name: Weavers of the Silver Thread
+      patron: lyrien
+      type: seer_order
+      base: moonwoven_sanctum
+      vows:
+        - never_weave_false_prophecy
+        - honor_dreams_of_mortals
+
+    - id: order_crimson_leaf
+      name: Order of the Crimson Leaf
+      patron: feralas
+      type: ranger_order
+      base: heartwild_glade
+      vows:
+        - hunt_only_what_must_fall
+        - guide_wanderers_out_of_doomed_woods
+
+    - id: forge_oathbound
+      name: Forge of the Oathbound
+      patron: drunmir
+      type: craft_order
+      base: ember_crucible
+      vows:
+        - no_oath_unkept
+        - no_blade_forged_without_purpose
+
+    - id: keepers_deep_anvil
+      name: Keepers of the Deep Anvil
+      patron: drunmir
+      type: guardian_order
+      base: ember_crucible
+      vows:
+        - guard_under-mountain_realms
+        - never_abandon_the_forge
+
+    - id: sisters_glowing_hearth
+      name: Sisters of the Glowing Hearth
+      patron: keldra
+      type: hospitaller_order
+      base: auryn_spire
+      vows:
+        - feed_the_hungry
+        - keep_one_fire_burning_permanently
+
+    - id: guild_clockwork_whim
+      name: Guild of Clockwork Whimsy
+      patron: zippalux
+      type: tinkers_guild
+      base: prime
+      vows:
+        - always_try_the_wild_idea
+        - document_every_experiment
+
+    - id: circle_hidden_turnings
+      name: Circle of Hidden Turnings
+      patron: merriby
+      type: spy_ring
+      base: prime
+      vows:
+        - paths_with_three_exits
+        - forget_what_must_not_be_known
+
+    - id: fellows_warm_road
+      name: Fellows of the Warm Road
+      patron: daleborn
+      type: travelers_brotherhood
+      base: prime
+      vows:
+        - share_fire_with_strangers
+        - leave_places_better
+
+    - id: host_bright_table
+      name: Host of the Bright Table
+      patron: tilda_brightcup
+      type: feasting_order
+      base: prime
+      vows:
+        - never_turn_away_guests
+        - toast_every_victory_and_defeat
+
+    - id: warband_thunder_skull
+      name: Warband of the Thunder-Skull
+      patron: grathul
+      type: warband
+      base: prime
+      vows:
+        - never_flee_storm_or_battle
+        - share_spoils_with_clan
+
+    - id: coven_white_bone
+      name: Coven of the White Bone
+      patron: shunaka
+      type: shaman_circle
+      base: bone_visions_pit
+      vows:
+        - heed_ancestor_whispers
+        - bury_the_forgotten_properly
+
   magic:
     sources:
-    - ley
-    - divine
-    - pact
-    - relic
+      - ley
+      - divine
+      - pact
+      - relic
     density: medium
     hazards:
-    - wild_surge
-    - arcane_radiation
+      - wild_surge
+      - arcane_radiation

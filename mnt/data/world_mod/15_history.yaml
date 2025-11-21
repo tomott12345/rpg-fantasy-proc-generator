@@ -1,9 +1,46 @@
 history:
   eras:
-  - name: Age of Sparks
-    start_bp: 500
-    events:
-    - year_bp: 470
-      summary: First ember-engine launched a sky-barge.
-    - year_bp: 120
-      summary: Riftquakes exposed the Sunken Spire.
+    - name: Age of Sparks
+      start_bp: 500
+      end_bp: 320
+      summary: "Early rise of artificers and ember-engines that pushed Etheras into a high-magic age."
+      events:
+        - year_bp: 470
+          summary: "First ember-engine launched a sky-barge over Thal’Varra."
+        - year_bp: 400
+          summary: "Construction of great arcane towers, including the first foundations of the Tower of Galveston."
+    - name: The Cataclysm
+      start_bp: 320
+      end_bp: 315
+      summary: "A cascade of uncontrolled high magic shattered ley lines, toppled towers, and cursed vast stretches of land."
+      events:
+        - year_bp: 320
+          summary: "Experimentation in starfall and temporal magic triggers chain reactions across the ley network."
+        - year_bp: 318
+          summary: "Fortresses crack, cities sink, and the Labyrinth of Shattered Paths forms in the underworld."
+        - year_bp: 315
+          summary: "Survivors seal away relics and knowledge in hidden libraries, mansions, and deep vaults."
+    - name: Age of Ashes
+      start_bp: 315
+      end_bp: 80
+      summary: "Scattered kingdoms claw their way back from ruin; undead and warped beasts stalk the broken lands."
+      events:
+        - year_bp: 280
+          summary: "The Ironbound Bastion falls to necromantic fire."
+        - year_bp: 200
+          summary: "Lost City near Dagger Depths is overrun by orcs, goblins, and ogres."
+        - year_bp: 120
+          summary: "Riftquakes expose the Sunken Spire along the scarred interior."
+    - name: Age of Shattered Paths
+      start_bp: 80
+      end_bp: 0
+      summary: "Current age of tenuous trade, rising cults, and renewed exploration of Cataclysm ruins."
+      events:
+        - year_bp: 40
+          summary: "Rise of the Cult of Ukobach in the cursed lands near the Fortress of the Wraith Baroness."
+        - year_bp: 25
+          summary: "The Desert Messiah stirs the tribes of the Sadri Desert before vanishing amidst blood and prophecy."
+        - year_bp: 10
+          summary: "Adventurers recover the Lost Sword of Alacar in the Glitterhold Forest."
+        - year_bp: 3
+          summary: "The Wraith Baroness consolidates undead forces south-west of Dagger Depths."

@@ -1,22 +1,54 @@
 cultures:
-- id: marosi
-  name: Marosi Freeholds
-  descriptors:
-  - maritime
-  - mercantile
-  - pragmatic
-  language: Marosi Trade Cant
-  typical_alignment: N
-  tech_level: late_medieval
-  pantheon:
-  - ukobach
-  aesthetics:
-  - salt-stained_oak
-  - brasswork
-  - naval_tattoos
-  taboos:
-  - spill_freshwater_at_sea
-  traits:
-    seafaring: 3
-    bargaining: 2
-    horsemanship: 0
+  - id: ackdonian
+    name: Ackdonian
+    region: ackdon
+    culture_type: coastal_mercantile
+    traits: {seafaring: 3, bargaining: 2, arcane_literacy: 1}
+    pantheon: [arlitha_ro, nikki_gerrian]
+    aesthetics: [salt_oak, blue_sails, brasswork]
+    taboos: [spill_freshwater_at_sea]
+
+  - id: sadri_nomads
+    name: Sadri Nomads
+    region: sadri_desert
+    culture_type: desert_tribal
+    traits: {endurance: 3, horsemanship: 2, mysticism: 1}
+    pantheon: [truella, shunaka]
+    aesthetics: [suncloth_robes, carved_bone_totems]
+    taboos: [waste_water, disturb_ancient_burial_dunes]
+
+  - id: iuned_folk
+    name: Iuned Folk
+    region: iuned
+    culture_type: frontier_resilient
+    traits: {survival: 3, vigilance: 2, trade: 2}
+    pantheon: [thalor, nikki_gerrian]
+    aesthetics: [weathered_wood, ironbound_gates]
+    taboos: [lie_under_oath]
+
+  - id: glitterhold_elves
+    name: Glitterhold Elves
+    region: glitterhold_forest
+    culture_type: ancient_forest_elven
+    traits: {archery: 3, druidic_magic: 3, craftsmanship: 2}
+    pantheon: [lyrien, feralas, truella]
+    aesthetics: [starlit_canopies, woven_moonsteel]
+    taboos: [cut_living_trees]
+
+  - id: dagger_marsh_orcs
+    name: Dagger March Orcs
+    region: lost_city
+    culture_type: warlike_tribal
+    traits: {strength: 3, intimidation: 2, shamanism: 1}
+    pantheon: [grathul, shunaka]
+    aesthetics: [bone_charms, war_paint]
+    taboos: [show_weakness_before_clan]
+
+  - id: wraithlands
+    name: Wraithland Cultists
+    region: wraith_fortress
+    culture_type: necromantic_cult
+    traits: {necromancy: 3, cruelty: 2, secrecy: 3}
+    pantheon: [nikki_gerrian, ukobach]
+    aesthetics: [ashen_cloaks, black_iron]
+    taboos: [expose_true_identity]

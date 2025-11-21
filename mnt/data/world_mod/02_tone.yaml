@@ -1,10 +1,110 @@
 tone:
   themes:
-  - high_fantasy
-  - dark_gritty
+    - high_fantasy
+    - dark_gritty
   tags:
-  - mythic
-  - frontier
-  - ruins
-  - ancient_magic
-  pg_rating: pg-13
+    - mythic
+    - frontier
+    - ruins
+    - ancient_magic
+  pg_rating: r
+  narrative_style:
+    pacing: slow_burn        # slow_burn | urgent | cinematic | episodic
+    voice: third_person      # third_person | limited | omniscient | first_person_lore
+    exposition_density: medium   # low | medium | high
+    description_style: atmospheric   # atmospheric | terse | poetic | brutalist
+    dialogue_tone: grounded         # grounded | archaic | sharp_wit | solemn
+  moods:
+    default:
+      tension: medium
+      hope: low
+      mystery: high
+    dungeon:
+      claustrophobia: high
+      dread: high
+      corruption: medium
+    wilderness:
+      awe: medium
+      danger: high
+      solitude: high
+    city:
+      intrigue: high
+      corruption: high
+      wonder: medium
+  morality:
+    alignment_skew: neutral_to_dark  # heroic | noble_dark | neutral_to_dark | chaos_tilted
+    common_motives:
+      - survival
+      - ambition
+      - secrets
+      - forbidden_knowledge
+      - ancient_oaths
+  combat:
+    lethality: high        # low | moderate | high | brutal
+    gore: restrained       # none | restrained | vivid
+    style: tactical        # tactical | cinematic | desperate
+  magic:
+    perception: feared         # feared | sacred | commonplace | outlawed
+    source: ancient            # ancient | elemental | divine | aberrant
+    side_effects:
+      - warping_flesh
+      - draining_lifeforce
+      - echoing_voices
+    visual_style:
+      - ember_glow
+      - shadow_flares
+      - sigil_lattices
+  environmental_tone:
+    forests:
+      feel: primeval
+      light: dim
+      sound: whispering_canopies
+    mountains:
+      feel: harsh
+      weather: unpredictable
+    ruins:
+      feel: haunted
+      decay_level: extreme
+  culture:
+    aesthetics:
+      - bronze_age
+      - rune_carved
+      - stonework
+    values:
+      - oathbound_tradition
+      - stoic_endurance
+      - quiet_faith
+    taboos:
+      - speaking_names_of_dead
+      - blood_magic
+      - breaking_guest_right
+  tropes:
+    encouraged:
+      - lost_ages
+      - cursed_objects
+      - tragic_heroes
+      - ancestral_wrongdoing
+    discouraged:
+      - chosen_one
+      - deus_ex_machina
+      - slapstick
+  inspirations:
+    books:
+      - The Black Company
+      - The First Law Trilogy
+      - The Silmarillion
+    games:
+      - Dark Souls
+      - Dragon Age Origins
+      - Baldur's Gate 2
+  additional_tags:
+    terrain:
+      - tundra
+      - badlands
+      - volcanic_wastes
+      - drowned_city
+    themes:
+      - tragic_history
+      - corrupted_magic
+      - forgotten_kings
+      - reclamation

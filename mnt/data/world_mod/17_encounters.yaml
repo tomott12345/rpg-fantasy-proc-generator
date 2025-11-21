@@ -1,26 +1,91 @@
 encounters:
   region_bands:
-    riftmarch:
-      day:
-        easy: 50
-        medium: 100
-        hard: 150
-        deadly: 200
-      night:
-        easy: 70
-        medium: 120
-        hard: 170
-        deadly: 230
+    ackdon:
+      day:   {easy: 40, medium: 80, hard: 120, deadly: 180}
+      night: {easy: 50, medium: 90, hard: 130, deadly: 190}
+    sadri_desert:
+      day:   {easy: 30, medium: 70, hard: 110, deadly: 160}
+      night: {easy: 40, medium: 80, hard: 130, deadly: 190}
+    dagger_depths:
+      day:   {easy: 35, medium: 75, hard: 120, deadly: 170}
+      night: {easy: 45, medium: 90, hard: 135, deadly: 190}
+    glitterhold_forest:
+      day:   {easy: 35, medium: 80, hard: 125, deadly: 180}
+      night: {easy: 45, medium: 90, hard: 140, deadly: 200}
+    wraith_fortress:
+      day:   {easy: 50, medium: 100, hard: 150, deadly: 220}
+      night: {easy: 60, medium: 120, hard: 180, deadly: 250}
+
   spawn_tables:
-  - region: riftmarch
-    biome: badlands
-    entries:
-    - weight: 3
-      creature: bandits
-      cr: 0.5
-    - weight: 1
-      creature: clockwork_warden
-      cr: 5
-    - weight: 2
-      creature: ash_wolves
-      cr: 2
+    - region: ackdon
+      biome: port_city
+      entries:
+        - weight: 4
+          creature: bandits
+          cr: 0.5
+        - weight: 2
+          creature: thugs
+          cr: 1
+        - weight: 1
+          creature: goblin
+          cr: 0.25
+        - weight: 1
+          creature: spy
+          cr: 2
+    - region: sadri_desert
+      biome: desert
+      entries:
+        - weight: 3
+          creature: raiders
+          cr: 1
+        - weight: 2
+          creature: troll
+          cr: 5
+        - weight: 1
+          creature: sand_wraith
+          cr: 4
+    - region: dagger_depths
+      biome: lake_and_ruins
+      entries:
+        - weight: 3
+          creature: ogre
+          cr: 2
+        - weight: 2
+          creature: hobgoblin
+          cr: 0.5
+        - weight: 2
+          creature: goblin
+          cr: 0.25
+        - weight: 1
+          creature: wight
+          cr: 3
+    - region: glitterhold_forest
+      biome: enchanted_forest
+      entries:
+        - weight: 3
+          creature: wolf_pack
+          cr: 1
+        - weight: 2
+          creature: troll
+          cr: 5
+        - weight: 1
+          creature: ghoul
+          cr: 2
+        - weight: 1
+          creature: dryad
+          cr: 2
+    - region: wraith_fortress
+      biome: cursed_badlands
+      entries:
+        - weight: 3
+          creature: skeleton
+          cr: 1
+        - weight: 2
+          creature: zombie
+          cr: 1
+        - weight: 1
+          creature: wraith
+          cr: 4
+        - weight: 1
+          creature: death_knight
+          cr: 10

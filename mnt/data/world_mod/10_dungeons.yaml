@@ -1,11 +1,106 @@
 dungeons:
-- id: spire-01
-  name: The Sunken Spire
-  type: ancient_tower
-  depth: 5
-  tags:
-  - arcane
-  - flooded
-  boss_seeds:
-  - astral_specter
-  - clockwork_warden
+  - id: spire-01
+    name: The Sunken Spire
+    type: ancient_tower
+    depth: 5
+    tags: [arcane, flooded]
+    boss_seeds: [astral_specter, clockwork_warden]
+
+  - id: house-ancient-01
+    name: House Valecourt Ruins
+    type: ancient_noble_house
+    depth: 4
+    tags: [haunted, noble, relic_cache]
+    history: "Once home to an elite mageblood family destroyed in the Cataclysm."
+    relics:
+      - valecourt_signet
+      - shattered_timepiece
+    boss_seeds: [vengeful_wraith, bone_noble]
+
+  - id: mansion-obsidian-01
+    name: Obsidian Manor
+    type: cursed_mansion
+    depth: 6
+    tags: [shadows, cursed, undead]
+    history: "The manor of a forgotten archmagus whose experiments tore rifts in Etheras."
+    relics:
+      - voidmirror_shard
+      - whispered_codex
+    boss_seeds: [shadow_baron, echo_ghast]
+
+  - id: library-lost-01
+    name: The Umbral Athenaeum
+    type: lost_library
+    depth: 7
+    tags: [forbidden_knowledge, arcane, maze-like]
+    history: "A subterranean library sealed after the Cataclysm, holding pre-disaster grimoires."
+    relics:
+      - tome_of_unmaking
+      - glyphbound_scroll
+    boss_seeds: [inkwraith, arcane_construct]
+
+  - id: tower-ancient-02
+    name: The Starfall Tower
+    type: shattered_tower
+    depth: 5
+    tags: [broken, celestial, arcane]
+    history: "An observatory tower cracked by falling stars during the Cataclysm."
+    relics:
+      - starshard_fragment
+      - astral_lens
+    boss_seeds: [fallen_angel_fragment, astral_horror]
+
+  - id: fortress-ruined-01
+    name: The Ironbound Bastion
+    type: ancient_fortress
+    depth: 8
+    tags: [military, cursed, siege_ruins]
+    history: "A fortress that fell when necromantic flames swept the borderlands."
+    relics:
+      - oathbreaker_blade
+      - emberplate_armor
+    boss_seeds: [death_knight, siege_lich]
+
+  - id: labyrinth-ancient-01
+    name: The Labyrinth of Shattered Paths
+    type: underground_labyrinth
+    depth: 10
+    tags: [maze, eldritch, shifting]
+    history: "A shifting maze said to have been warped by unstable Cataclysm energies."
+    relics:
+      - prism_of_ways
+      - memory_key
+    boss_seeds: [minotaur_specter, phase_horror]
+
+  - id: cavern-ancient-01
+    name: The Crystalroot Caverns
+    type: deep_caves
+    depth: 6
+    tags: [crystalline, bioluminescent, ancient_growth]
+    history: "Caves formed from magically mutated roots after the Cataclysm."
+    relics:
+      - crystalroot_wand
+      - lumenshard
+    boss_seeds: [crystal_golem, fungus_titan]
+
+  - id: ruin-cataclysm-01
+    name: The Fractured Archive
+    type: cataclysm_ruin
+    depth: 9
+    tags: [temporal, unstable, haunted]
+    history: "A vault from pre-Cataclysm Etheras where time fractures still linger."
+    relics:
+      - hourglass_of_ages
+      - temporal_anchor
+    boss_seeds: [chronophage, timewraith]
+
+  - id: house-ancient-02
+    name: The Ebonwing Estate
+    type: ruined_estate
+    depth: 4
+    tags: [fallen_nobility, cursed, shadow_magic]
+    history: "Ruined home of an aristocratic lineage that delved into shadow magic."
+    relics:
+      - ebonwing_signet
+      - shadowveil_tapestry
+    boss_seeds: [shade_noble, shadow_harpy]

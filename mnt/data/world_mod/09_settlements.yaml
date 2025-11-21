@@ -1,19 +1,53 @@
 settlements:
-- id: port_verdan
-  name: Port Verdan
-  type: city
-  population: 48000
-  region: coastlands
-  culture: marosi
-  government: council_oligarchy
-  economy:
-  - shipwrights
-  - spice
-  - artificing
-  districts:
-  - name: Green Quay
-    notes: Kelp markets; salvage auctions every third tide.
-  problems:
-  - smog
-  - guild_strikes
-  - missing_dockhands
+  - id: ackdon
+    name: Ackdon, City of Grace
+    type: port_city
+    location: bay_of_dawns_refuge
+    population: large
+    economy: [shipping, fishing, trade, arcane_studies]
+    districts:
+      - name: Dawn Quay
+        notes: "Major trade docks and lighthouse district."
+      - name: Grace Market
+        notes: "Open-air market connecting many cultures."
+    resources: [fish, timber, arcane_relics]
+
+  - id: iuned
+    name: Iuned
+    type: frontier_city
+    location: west_sadri
+    population: medium
+    economy: [furs, ironwork, mercenaries]
+    resources: [iron, coal, wild_game]
+
+  - id: daggerdepths_village
+    name: Lakewatch
+    type: lakeside_town
+    location: dagger_depths
+    population: small
+    notes: "Fishermen who glimpse strange shapes beneath the waters."
+    resources: [freshwater_fish, reeds]
+
+  - id: glitterhold
+    name: Glitterhold Rest
+    type: forest_outpost
+    location: glitterhold_forest
+    population: small
+    notes: "Elven outpost preserving the tomb of Alacar."
+    resources: [rare_herbs, enchanted_sap]
+
+  - id: wraith_fort
+    name: Wraith Baroness Fortress
+    type: cursed_keep
+    location: wraithlands
+    population: unknown
+    notes: "Cursed necromantic land ruled by undead and the Cult of Ukobach."
+    resources: [necrotic_crystals]
+
+  - id: tradepost_south
+    name: Sandgate
+    type: desert_tradepost
+    location: sadri_desert
+    population: small
+    notes: "Trading hub between desert tribes and coastal merchants."
+    resources: [spices, salt]

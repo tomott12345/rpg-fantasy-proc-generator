@@ -1,10 +1,11 @@
 loot:
   coinage:
-  - copper
-  - silver
-  - electrum
-  - gold
-  - platinum
+    - copper
+    - silver
+    - electrum
+    - gold
+    - platinum
+
   bundles:
     poor:
       dice: 2d10
@@ -15,8 +16,26 @@ loot:
     rich:
       dice: 4d12
       unit: gold
+
   magic_rolls:
     common: 60
     uncommon: 30
     rare: 9
     very_rare: 1
+
+  cataclysm_relics:
+    minor:
+      - valecourt_signet
+      - ebonwing_signet
+      - crystalroot_wand
+      - lumenshard
+    major:
+      - hourglass_of_ages
+      - temporal_anchor
+      - voidmirror_shard
+      - tome_of_unmaking
+      - starshard_fragment
+      - astral_lens
+    unique:
+      - lost_sword_of_alacar
+      - cursed_candle_of_frances

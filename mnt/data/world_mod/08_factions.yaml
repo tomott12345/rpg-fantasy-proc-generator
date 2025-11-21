@@ -1,14 +1,40 @@
 factions:
-- id: tinker_guild
-  name: Guild of Emberwrights
-  type: guild
-  goals:
-  - corner_steam_exports
-  - recover_relic_schematics
-  resources:
-  - workshops
-  - scrip
-  - smugglers
-  reputation:
-    public: mixed
-    underworld: favored
+  - id: radiant_church
+    name: Church of the Radiant Dawn
+    type: religious
+    allegiance: arlitha_ro
+    base_region: ackdon
+    goals: [spread_light, heal_sick, oppose_necromancy]
+
+  - id: shadow_veil
+    name: Shadowed Veil Cabal
+    type: religious_cult
+    allegiance: nikki_gerrian
+    base_region: duskfall_coasts
+    goals: [hoard_secrets, influence_nobles]
+
+  - id: wild_oath_concord
+    name: Concord of the Wild Oath
+    type: druidic_circle
+    allegiance: truella
+    base_region: glitterhold_forest
+
+  - id: trade_consortium
+    name: Thal’Varra Trade Consortium
+    type: mercantile
+    allegiance: none
+    base_region: ackdon
+    goals: [protect_routes, maintain_markets]
+
+  - id: daggerdepth_raiders
+    name: Daggerdepth Raiders
+    type: warband
+    allegiance: grathul
+    base_region: lost_city
+
+  - id: cult_ukobach
+    name: Cult of Ukobach
+    type: infernal_cult
+    allegiance: ukobach
+    base_region: wraith_fortress
+    goals: [raise_undead_legions, spread_curses]

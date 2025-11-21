@@ -2,3 +2,21 @@ house_rules:
   exploration_turn_minutes: 10
   short_rest_minutes: 60
   identify_rule: ritual_only
+
+  cataclysm_relics:
+    attunement_hours: 48
+    side_effects_on_failed_attunement: true
+    notes: "Relics dating from before the Cataclysm are powerful but unstable; mishandling can trigger wild magic or visions of the past."
+
+  holy_days:
+    mechanical_bonus:
+      description: "On major holy days from the Etheras calendar, PCs gain advantage on one roll per session tied to that deity's domain."
+      examples:
+        radiant_dawn: "Advantage on courage or oath-related checks."
+        wild_oath: "Advantage on nature or animal handling checks."
+        shadow_eclipse: "Advantage on stealth or deception checks."
+
+  undead_terror:
+    fear_checks_against_powerful_undead: true
+    description: "Facing wights, wraiths, or death knights requires a morale or fear save for low-level PCs."
+

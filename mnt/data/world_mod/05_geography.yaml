@@ -1,43 +1,91 @@
 geography:
   world_size: medium
   tectonics: moderate
-  climate_bands:
-  - polar
-  - temperate
-  - arid
-  - tropical
+  climate_bands: [polar, temperate, arid, tropical]
+
   continents:
-  - id: thal
-    name: Thal’Varra
-    notes: Rift-scarred interior; ley confluence to the east.
-    regions:
-    - id: riftmarch
-      biome: badlands
-      tags:
-      - ruins
-      - banditry
-      - ancient_rifts
-      landmarks:
-      - id: sunken_spire
-        type: ruin
-        hooks:
-        - sealed_door
-        - astral_echoes
-    - id: coastlands
-      biome: coast
-      tags:
-      - trade
-      - fishing
-      - fog
-    - id: high_vale
-      biome: mountains
-      tags:
-      - fortresses
-      - mines
-      - snow_passes
-    - id: ash_desert
-      biome: desert
-      tags:
-      - black_sand
-      - glass_flats
-      - heat_mirages
+    - id: thal
+      name: Thal’Varra
+      notes: "Rift-scarred interior; ley confluence to the east."
+
+      regions:
+        - id: ackdon_bay
+          name: Bay of Dawn’s Refuge
+          biome: temperate_coast
+          notes: "Deep natural harbor where the port city Ackdon rises."
+          settlements: [ackdon]
+
+        - id: ackdon
+          name: Ackdon, City of Grace
+          type: port_city
+          biome: temperate_coast
+          notes: "Major trade hub. Gateway between north and south."
+          landmarks: [tower_galveston]
+          borders:
+            north: tower_galveston
+            south: sadri_desert
+            east: bay_of_dawns_refuge
+            west: hills_greenward
+
+        - id: tower_galveston
+          name: Tower of Galveston
+          type: arcane_tower
+          biome: coastal_hills
+          notes: "Ancient magical tower overseeing passage into Ackdon’s bay."
+
+        - id: sadri_desert
+          name: Sadri Desert
+          biome: arid
+          notes: "Harsh southern wastes; origin of the Desert Messiah campaign."
+          borders:
+            north: ackdon
+            west: iuned
+            south: glitterhold_forest
+            east: sea_agen
+
+        - id: sea_agen
+          name: Sea of Agen
+          biome: ocean
+          notes: "Warm currents crash against the Sadri sands."
+
+        - id: iuned
+          name: Iuned
+          biome: dry_steppe
+          type: frontier_city
+          notes: "Western gateway of the Wraith Baroness campaign."
+          borders:
+            east: sadri_desert
+            south: dagger_depths
+
+        - id: dagger_depths
+          name: Dagger Depths Great Lake
+          biome: freshwater_lake
+          notes: "Massive deep lake dividing Iuned from Glitterhold Forest."
+          features: [lost_city]
+
+        - id: lost_city
+          name: Lost City of Dagger Depths
+          biome: ruined_megacity
+          notes: "Overrun by orcs, goblins, hobgoblins, trolls, and ogres. Houses the Lost City Library."
+          landmarks: [lost_city_library]
+
+        - id: lost_city_library
+          name: Lost City Library
+          type: ancient_library
+          notes: "Contains hidden tomes of ancient knowledge and magical relics."
+
+        - id: glitterhold_forest
+          name: Glitterhold Forest
+          biome: enchanted_forest
+          notes: "Resting place of Paladin Alacar and the Lost Sword of Alacar."
+          borders:
+            north: sadri_desert
+            west: dagger_depths
+
+        - id: wraith_fortress
+          name: Fortress of the Wraith Baroness
+          biome: cursed_badlands
+          notes: "Necromancy-scarred land patrolled by undead legions under the Cult of Ukobach."
+          borders:
+            northeast: dagger_depths
+

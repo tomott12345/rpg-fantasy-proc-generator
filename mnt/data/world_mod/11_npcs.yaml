@@ -1,11 +1,184 @@
 npcs:
-- id: ivory-fox
-  archetype: performer
-  role: fixer
-  traits:
-  - charismatic
-  - calculating
-  bonds:
-  - tinker_guild
-  secrets:
-  - owes_debt_to_smugglers
+  - id: ivory-fox
+    name: "The Ivory Fox"
+    archetype: performer
+    role: fixer
+    race: human
+    culture: ackdonian
+    location: ackdon
+    traits:
+      - charismatic
+      - calculating
+      - well_connected
+    bonds:
+      - tinker_guild
+      - trade_consortium
+    secrets:
+      - owes_debt_to_smugglers
+
+  - id: cranky-dwarf
+    name: "Brodrik 'Cranky' Stonekeg"
+    archetype: merchant
+    role: proprietor
+    race: dwarf
+    subrace: hill_dwarf
+    location: ackdon
+    shop_name: "Stonekeg Provisions"
+    shop_type: general_goods
+    traits:
+      - gruff
+      - loud
+      - secretly_softhearted
+    bonds:
+      - trade_consortium
+    secrets:
+      - keeps_a_locked_chest_of_cataclysm_relics_under_the_floor
+
+  - id: frances-cursed-candle
+    name: "Frances Underbough"
+    archetype: innkeeper
+    role: thieves_guild_leader
+    race: halfling
+    subrace: meadow_halfling
+    location: ackdon
+    inn_name: "The Cursed Candle"
+    traits:
+      - charming
+      - ruthless
+      - always_smiling
+    bonds:
+      - thieves_guild_ackdon
+      - shadow_veil
+    secrets:
+      - owns_a_cursed_candle_relic_from_pre_cataclysm_days
+      - maintains_ledgers_on_half_the_citys_nobles
+
+  - id: captain-searan
+    name: "Captain Elira Searen"
+    archetype: ship_captain
+    role: merchant_privateer
+    race: human
+    culture: valorian
+    location: ackdon
+    vessel: "Wavecutter"
+    traits:
+      - daring
+      - pragmatic
+      - superstitious
+    bonds:
+      - trade_consortium
+      - radiant_church
+    secrets:
+      - smuggles_relics_out_of_dagger_depths_for_frances
+
+  - id: tower-keeper-galveston
+    name: "Magister Galveston"
+    archetype: wizard
+    role: recluse_scholar
+    race: human
+    culture: zhen
+    location: tower_galveston
+    traits:
+      - absentminded
+      - brilliant
+      - paranoid
+    bonds:
+      - radiant_church
+    secrets:
+      - witnessed_fragments_of_the_cataclysm_in_divinatory_visions
+
+  - id: desert-guide-sadri
+    name: "Sahira of the Sadri"
+    archetype: guide
+    role: caravan_scout
+    race: human
+    culture: umbari
+    location: sadri_desert
+    traits:
+      - stoic
+      - observant
+      - deeply_spiritual
+    bonds:
+      - sadri_nomads
+    secrets:
+      - once_followed_a_desert_messiah_and_survived_their_fall
+
+  - id: warden-iuned
+    name: "Marshal Corin Dales"
+    archetype: commander
+    role: city_guard_captain
+    race: human
+    culture: atlan
+    location: iuned
+    traits:
+      - disciplined
+      - weary
+      - incorruptible
+    bonds:
+      - order_luminous_chain
+    secrets:
+      - fears_the_wraith_baroness_more_than_he_admits
+
+  - id: ranger-glitterhold
+    name: "Selthir Moonbough"
+    archetype: ranger
+    role: forest_warden
+    race: elf
+    subrace: wood_elf
+    location: glitterhold_forest
+    traits:
+      - quiet
+      - precise
+      - reverent
+    bonds:
+      - glitterhold_elves
+      - concord_wild_oath
+    secrets:
+      - knows_the_true_location_of_alacars_tomb
+
+  - id: scholar-lost-city
+    name: "Professor Tamsin Greyleaf"
+    archetype: scholar
+    role: ruins_researcher
+    race: gnome
+    subrace: glen_gnome
+    location: lost_city
+    traits:
+      - curious
+      - reckless
+      - talkative
+    bonds:
+      - guild_clockwork_whim
+    secrets:
+      - has_a_key_to_a_hidden_vault_in_the_lost_city_library
+
+  - id: priest-ukobach
+    name: "High Ember Adept Kharzul"
+    archetype: cult_priest
+    role: cult_leader
+    race: orc
+    location: wraith_fortress
+    traits:
+      - fanatical
+      - cruel
+      - eerily_calm
+    bonds:
+      - cult_ukobach
+    secrets:
+      - seeking_a_ritual_to_repeat_a_fragment_of_the_cataclysm
+
+  - id: ferrymaster-lakewatch
+    name: "Old Mira Lakewatch"
+    archetype: boatman
+    role: ferrymaster
+    race: human
+    culture: ackdonian
+    location: dagger_depths
+    traits:
+      - grumpy
+      - sharp_eyed
+      - tight_lipped
+    bonds:
+      - trade_consortium
+    secrets:
+      - has_seen_things_in_the_lake_that_are_not_of_this_age

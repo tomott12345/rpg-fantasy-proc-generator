@@ -1,23 +1,95 @@
 names:
   syllables:
     start:
-    - Var
-    - Mar
-    - Tho
-    - Dar
-    - Ela
+      - Var
+      - Mar
+      - Tho
+      - Dar
+      - Ela
+      - Kor
+      - Sha
+      - Lun
+      - Gal
+      - Ak
     mid:
-    - os
-    - an
-    - ir
-    - um
-    - eth
+      - os
+      - an
+      - ir
+      - um
+      - eth
+      - al
+      - ren
+      - dor
+      - vel
     end:
-    - a
-    - 'on'
-    - is
-    - ar
-    - e
+      - a
+      - "on"
+      - is
+      - ar
+      - e
+      - uth
+      - ien
+      - or
   patterns:
-  - start-mid-end
-  - start-end
+    - start-mid-end
+    - start-end
+
+  cultures:
+    human_valorian:
+      given_male: [Aldric, Tomas, Geralt, Corin, Markus]
+      given_female: [Elira, Francesca, Lysa, Mara, Elayne]
+      family: [Stonekeg, Dales, Marrowind, Galestar, Ackwright]
+    human_zhen:
+      given_male: [Jian, Ren, Kairo, Lian]
+      given_female: [Mei, Liora, Suyin, Hana]
+      family: [Galveston, Sunvale, Emberfall]
+    human_umbari:
+      given_male: [Sefu, Dakarai, Jalen]
+      given_female: [Sahira, Amadi, Nyala]
+      family: [Sandwalker, Duneheart, Mirageborn]
+    human_atlan:
+      given_male: [Talon, Rian, Jace]
+      given_female: [Kara, Mira, Tessa]
+      family: [Lakewatch, Farshore, Ridgewell]
+
+    elf_wood:
+      given: [Selthir, Lethaniel, Arannis, Thalara, Elyndra]
+      family: [Moonbough, Glitterleaf, Starbranch]
+    elf_dark:
+      given: [Zariel, Vexira, Drath, Velkyn]
+      family: [Ebonwing, Nightshard]
+    elf_snow:
+      given: [Caelthas, Ilyra, Svern, Ylena]
+      family: [Frostbloom, Iceveil]
+    elf_river:
+      given: [Nerien, Taloril, Seris, Linwe]
+      family: [Riverglow, Tideweaver]
+
+    dwarf_hill:
+      given: [Brodrik, Hilda, Torik, Brynja]
+      family: [Stonekeg, Ironbarrel, Deepdelve]
+    dwarf_mountain:
+      given: [Drunmir, Keldra, Thrain, Morgra]
+      family: [Stormdelver, Mithrilheart, Anvilguard]
+
+    gnome_glen:
+      given: [Tamsin, Pipwick, Folren, Zippa]
+      family: [Greyleaf, Gearwhistle]
+    gnome_meadow:
+      given: [Merriby, Jinx, Nella, Rolo]
+      family: [Lanternskip, Quickburrow]
+
+    halfling_glen:
+      given: [Frances, Milo, Lottie, Bram]
+      family: [Underbough, Hilltuck, Brambletoe]
+    halfling_meadow:
+      given: [Tilda, Daleborn, Rowan, Cora]
+      family: [Brightcup, Greenmeadow]
+
+    orc:
+      given: [Grathul, Kharzul, Rusk, Vorga]
+      family: [Bloodwind, Bone-Seer, Ashmaw]
+
+    mixed_half_orc:
+      given: [Roka, Durn, Kessa, Marek]
+      family: [Halfblood, Borderborn]

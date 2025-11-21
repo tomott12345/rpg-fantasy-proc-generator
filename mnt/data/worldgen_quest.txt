@@ -1,3 +1,5 @@
-Missing_Person in Riftmarch: is_the_villain.
+Quest Type: Dungeon_Delving
+Region: Sadri Desert
+Twist: time flows strangely within the ruin
 Complication: A rival faction interferes.
-Reward Tier: 1d6.
+Reward Tier: standard

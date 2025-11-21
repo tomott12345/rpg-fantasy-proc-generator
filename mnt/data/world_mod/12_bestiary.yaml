@@ -1,9 +1,76 @@
 bestiary:
-- id: clockwork_warden
-  cr: 5
-  habitats:
-  - ruins
-  - workshops
-  tags:
-  - construct
-  - guardian
+  - id: clockwork_warden
+    cr: 5
+    habitats: [ruins, workshops]
+    tags: [construct, guardian]
+
+  # Undead of Etheras
+  - id: skeleton
+    cr: 1
+    habitats: [wraith_fortress, cataclysm_ruins, ancient_crypts]
+    tags: [undead, low_rank]
+  - id: zombie
+    cr: 1
+    habitats: [wraith_fortress, battlefields, cursed_villages]
+    tags: [undead, low_rank]
+  - id: ghoul
+    cr: 2
+    habitats: [graveyards, lost_city, glitterhold_forest_edges]
+    tags: [undead, cannibal]
+  - id: wight
+    cr: 3
+    habitats: [wraith_fortress, cataclysm_ruins]
+    tags: [undead, elite]
+  - id: wraith
+    cr: 4
+    habitats: [wraith_fortress, umbral_athenaeum, starfall_tower]
+    tags: [undead, incorporeal]
+  - id: death_knight
+    cr: 10
+    habitats: [ironbound_bastion, wraith_fortress]
+    tags: [undead, commander, rare]
+
+  # Giants and great beings
+  - id: fire_giant
+    cr: 8
+    habitats: [ember_crucible, volcanic_ranges]
+    tags: [giant, fire]
+  - id: frost_giant
+    cr: 8
+    habitats: [snow_peaks, polar_wastes]
+    tags: [giant, cold]
+  - id: mountain_giant
+    cr: 7
+    habitats: [high_mountains, remote_valleys]
+    tags: [giant, stone]
+
+  # Common non-undead threats
+  - id: troll
+    cr: 5
+    habitats: [glitterhold_forest, deep_swamps, caves]
+    tags: [regenerating, brute]
+  - id: ogre
+    cr: 2
+    habitats: [dagger_depths, border_hills]
+    tags: [brute, dumb]
+  - id: goblin
+    cr: 0.25
+    habitats: [lost_city, caves, roadside_ambush_sites]
+    tags: [goblinoid, skirmisher]
+  - id: hobgoblin
+    cr: 0.5
+    habitats: [lost_city, ruined_forts]
+    tags: [goblinoid, disciplined]
+  - id: bugbear
+    cr: 2
+    habitats: [forest_edges, ruins]
+    tags: [goblinoid, ambusher]
+  - id: orc
+    cr: 0.5
+    habitats: [lost_city, borderlands, orc_war_camps]
+    tags: [orc, raider]
+
+  - id: ash_wolves
+    cr: 2
+    habitats: [riftmarch, cursed_plains]
+    tags: [beast, elemental_tainted]

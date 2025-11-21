@@ -1,11 +1,77 @@
 species:
-- id: human
-  playable: true
-  variants:
-  - marosi
-  - riftborn
-- id: dwarf
-  playable: true
-  variants:
-  - stoneheart
-  - emberforged
+  - id: human
+    playable: true
+    variants:
+      - valorian    # European-inspired
+      - zhen        # Asian-inspired
+      - umbari      # African-inspired
+      - atlan       # Americas-inspired
+    notes: "Humans are widespread and culturally diverse."
+
+  - id: elf
+    playable: true
+    variants:
+      - wood_elf
+      - dark_elf
+      - snow_elf
+      - river_elf
+    notes: "Elven kind splintered by ancient migrations and magical adaptations."
+
+  - id: dwarf
+    playable: true
+    variants:
+      - hill_dwarf
+      - mountain_dwarf
+    notes: "Dwarves dwell in deep halls and hill forts."
+
+  - id: gnome
+    playable: true
+    variants:
+      - glen_gnome
+      - meadow_gnome
+
+  - id: halfling
+    playable: true
+    variants:
+      - glen_halfling
+      - meadow_halfling
+
+  - id: orc
+    playable: false
+    variants:
+      - green_orc
+      - redtusk_orc
+
+  - id: half_orc
+    playable: true
+    variants:
+      - mixed_blood
+    notes: "Half-orcs arise from borderland conflicts or rare alliances."
+
+monsters:
+  undead:
+    - skeleton
+    - zombie
+    - ghoul
+    - wight
+    - wraith
+    - death_knight
+    - ghost
+    - bone_golem
+
+  giants:
+    - fire_giant
+    - frost_giant
+    - mountain_giant
+    - storm_giant
+
+  creatures:
+    - troll
+    - ogre
+    - bugbear
+    - goblin
+    - hobgoblin
+    - orc
+    - dire_wolf
+    - basilisk
+    - wyvern

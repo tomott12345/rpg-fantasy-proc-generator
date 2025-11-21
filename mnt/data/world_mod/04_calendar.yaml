@@ -1,12 +1,255 @@
 calendar:
+  year_length: 365
   days_per_week: 7
+
+  weekdays:
+    - id: dawnday
+      name: Dawnday
+      meaning: "New beginnings, oaths, and light."
+    - id: hearthday
+      name: Hearthday
+      meaning: "Home, family, and craft."
+    - id: moonday
+      name: Moonday
+      meaning: "Dreams, tides, and secrets."
+    - id: verdantday
+      name: Verdantday
+      meaning: "Growth, travel, and trade."
+    - id: swordsday
+      name: Swordsday
+      meaning: "Conflict, trials, and courage."
+    - id: shroudday
+      name: Shroudday
+      meaning: "Shadow, schemes, and remembrance."
+    - id: restday
+      name: Restday
+      meaning: "Rest, feasting, and worship."
+
   months:
-  - name: Firstlight
-    days: 30
+    - id: firstlight
+      name: Firstlight
+      order: 1
+      days: 37
+      season: spring
+      notes: "Thaw, first planting, renewed vows."
+    - id: seedmelt
+      name: Seedmelt
+      order: 2
+      days: 37
+      season: spring
+      notes: "Rains, sowing, pilgrimages to sacred sites."
+    - id: greengold
+      name: Greengold
+      order: 3
+      days: 37
+      season: summer
+      notes: "High growth, first harvests, fairs."
+    - id: highsun
+      name: Highsun
+      order: 4
+      days: 37
+      season: summer
+      notes: "Longest days, great campaigns and journeys."
+    - id: emberwane
+      name: Emberwane
+      order: 5
+      days: 37
+      season: late_summer
+      notes: "Heat begins to wane, forges burn hottest."
+    - id: harvestdeep
+      name: Harvestdeep
+      order: 6
+      days: 36
+      season: autumn
+      notes: "Full harvest, gatherings and markets."
+    - id: duskfall
+      name: Duskfall
+      order: 7
+      days: 36
+      season: autumn
+      notes: "Leaves fall, spirits walk, borders feel thin."
+    - id: longnight
+      name: Longnight
+      order: 8
+      days: 36
+      season: winter
+      notes: "Darkest nights, storytelling and omens."
+    - id: frostwane
+      name: Frostwane
+      order: 9
+      days: 36
+      season: winter
+      notes: "Deep cold, trials of endurance, sacred fasts."
+    - id: thawtide
+      name: Thawtide
+      order: 10
+      days: 36
+      season: late_winter
+      notes: "Ice relents, rivers wake, preparations for planting."
+
+  seasons:
+    - id: spring
+      name: Springtide
+      months: [firstlight, seedmelt]
+    - id: summer
+      name: Brightsummer
+      months: [greengold, highsun]
+    - id: late_summer
+      name: Emberturn
+      months: [emberwane]
+    - id: autumn
+      name: Harvestfall
+      months: [harvestdeep, duskfall]
+    - id: winter
+      name: Winterdeep
+      months: [longnight, frostwane]
+    - id: late_winter
+      name: Thawtide
+      months: [thawtide]
+
+  # Holy days are primarily religious observances tied to specific deities.
+  holy_days:
+    - id: radiant_dawn
+      name: Festival of the Radiant Dawn
+      month: firstlight
+      day: 1
+      deities: [arlitha_ro, selendriel]
+      races: [human, dwarf, halfling]
+      type: holy_day
+      description: "Marking the first sunrise of the new year with great bonfires and oaths of renewal."
+      effects:
+        - "Advantage on checks related to courage, oaths, and truth-seeking."
+    - id: wild_oath
+      name: Truella's Wild Oath
+      month: seedmelt
+      day: 9
+      deities: [truella]
+      races: [human, elf]
+      type: holy_day
+      description: "Druids and rangers swear to uphold the balance for another year, sealing vows with blood and rain."
+      effects:
+        - "Nature spirits are unusually active; animal-based magic is strengthened."
+    - id: shadow_eclipse
+      name: Night of the Veiled Star
+      month: duskfall
+      day: 13
+      deities: [nikki_gerrian]
+      races: [human, elf]
+      type: holy_day
+      description: "A rare night when a silver star appears shrouded; thieves, gamblers, and spies invoke Nikki and Gerrian."
+      effects:
+        - "+1 step to luck or stealth checks; all bargains made this night are binding in shadow."
+    - id: keepers_judgment
+      name: Thalor's Judgment Day
+      month: harvestdeep
+      day: 21
+      deities: [thalor, vaerun]
+      races: [human, dwarf]
+      type: holy_day
+      description: "Public trials, oaths, and reconciliations; records are inscribed in great tomes."
+      effects:
+        - "Legal petitions and oaths sworn on this day are believed unbreakable without dire consequence."
+    - id: moonweave_vigil
+      name: Moonweave Vigil
+      month: longnight
+      day: 7
+      deities: [lyrien]
+      races: [elf]
+      type: holy_day
+      description: "Elves keep silent watch as the moon traces a high arc, weaving starlight wards and dreams."
+      effects:
+        - "Dreams are prophetic; divination magic about the coming year is favored."
+    - id: stoneoath_forge
+      name: Stoneoath Forging
+      month: emberwane
+      day: 18
+      deities: [drunmir, keldra]
+      races: [dwarf]
+      type: holy_day
+      description: "Dwarven clans renew oaths at the forge, tempering steel and family bonds alike."
+      effects:
+        - "Items forged this day are considered masterwork and carry a trace of ancestral blessing."
+    - id: ember_censer
+      name: Ember Censer Night
+      month: emberwane
+      day: 23
+      deities: [ukobach]
+      races: [gnome, dwarf, human]
+      type: holy_day
+      description: "Tinkerers and reckless pyromancers light experimental furnaces and pray their sparks don't become infernos."
+      effects:
+        - "+10% chance of wild magical surges involving fire or machinery."
+    - id: ancestors_whisper
+      name: Night of White Bone
+      month: duskfall
+      day: 30
+      deities: [shunaka]
+      races: [orc, human]
+      type: holy_day
+      description: "Shamans cast bones into sacred pits, listening for the whispers of ancestors."
+      effects:
+        - "Spirits are close; necromancy and ancestor communion are easier but more dangerous."
+
+  # Festivals are broader cultural/seasonal events, though many are still sacred.
   festivals:
-  - name: Emberwake
-    month: Firstlight
-    day: 15
-    effects:
-    - +10% fire_magic
-    - markets_open_all_night
+    - id: emberwake
+      name: Emberwake
+      month: firstlight
+      day: 15
+      deities: [ukobach, drunmir]
+      races: [human, dwarf, gnome]
+      type: festival
+      description: "Markets stay open through the night as forges and braziers burn bright, celebrating the return of long days."
+      effects:
+        - "+10% fire_magic"
+        - "markets_open_all_night"
+    - id: greengold_fair
+      name: Greengold Fair
+      month: greengold
+      day: 20
+      deities: [truella, feralas]
+      races: [human, elf, halfling]
+      type: festival
+      description: "Great outdoor fairs with contests of archery, horse racing, and druidic displays."
+      effects:
+        - "Advantage on social checks during the fair due to heightened spirits."
+    - id: longtable_feast
+      name: Longtable Feast
+      month: harvestdeep
+      day: 10
+      deities: [daleborn, tilda_brightcup, keldra]
+      races: [halfling, human, dwarf]
+      type: festival
+      description: "Communal tables stretch through villages; no one is permitted to go hungry."
+      effects:
+        - "Temporary truces often observed; hostilities are frowned upon and sometimes cursed."
+    - id: tinkers_moon
+      name: Tinker’s Moon
+      month: thawtide
+      day: 28
+      deities: [zippalux, merriby]
+      races: [gnome, halfling, human]
+      type: festival
+      description: "Gnomes unveil wild inventions at night markets lit by colored lanterns."
+      effects:
+        - "Invention checks are favored; a higher chance for spectacular success or comical disaster."
+    - id: stormcall
+      name: Stormcall
+      month: highsun
+      day: 5
+      deities: [grathul]
+      races: [orc, human]
+      type: festival
+      description: "Orcish warbands and human mercenaries alike howl to the sky, seeking storms as blessing and test."
+      effects:
+        - "Weather magic is volatile; martial prowess is admired and often challenged."
+    - id: longest_night
+      name: Longest Night Fires
+      month: longnight
+      day: 18
+      deities: [arlitha_ro, lyrien, truella]
+      races: [all]
+      type: festival
+      description: "On the darkest night, fires and lanterns are lit in every settlement; songs and tales defy the encroaching dark."
+      effects:
+        - "Creatures of shadow are weakened; courage checks and saves are bolstered."

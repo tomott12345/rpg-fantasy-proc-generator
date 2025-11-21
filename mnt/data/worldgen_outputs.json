@@ -1,36 +1,64 @@
 {
   "settlement": {
-    "now": "2025-11-11T20:31:46.971403",
-    "region": "high_vale",
-    "biome": "coast",
-    "type": "hamlet",
-    "population": 90,
-    "problems": [],
-    "defense_rating": 1,
-    "market_size": "tiny"
+    "now": "2025-11-13T11:05:47.487947",
+    "region": {
+      "id": "glitterhold_forest",
+      "label": "Glitterhold Forest"
+    },
+    "settlement_type": {
+      "id": "town",
+      "label": "town"
+    },
+    "settlement": {
+      "id": "town",
+      "label": "town"
+    },
+    "settlement_problem": "monster attacks from nearby ruins",
+    "output": "A town located in Glitterhold Forest.\nCurrent Problem: monster attacks from nearby ruins\n"
   },
   "dungeon": {
-    "now": "2025-11-11T20:31:46.971496",
-    "region": "ash_desert",
-    "theme": "ruin_arcane",
-    "depth": 3,
-    "cr_guess": 2
+    "now": "2025-11-13T11:05:47.487968",
+    "region": {
+      "id": "sadri_desert",
+      "label": "Sadri Desert"
+    },
+    "dungeon_theme": {
+      "id": "cataclysmic_ruins",
+      "name": "Cataclysmic Ruins",
+      "tags": [
+        "temporal",
+        "unstable",
+        "relic_rich"
+      ]
+    },
+    "dungeon": {
+      "id": "cataclysmic_ruins",
+      "name": "Cataclysmic Ruins",
+      "tags": [
+        "temporal",
+        "unstable",
+        "relic_rich"
+      ]
+    },
+    "output": "Cataclysmic Ruins located near Sadri Desert.\nThemes: ['temporal', 'unstable', 'relic_rich']\n"
   },
   "quest": {
-    "now": "2025-11-11T20:31:46.971525",
-    "region": "riftmarch",
-    "difficulty_baseline": "standard",
+    "now": "2025-11-13T11:05:47.487976",
     "cr_guess": 3,
+    "region": {
+      "id": "sadri_desert",
+      "label": "Sadri Desert"
+    },
     "hook_types": {
-      "type": "missing_person",
-      "twist": "is_the_villain"
+      "type": "dungeon_delving",
+      "twist": "time flows strangely within the ruin"
     },
     "hook": {
-      "type": "missing_person",
-      "twist": "is_the_villain"
+      "type": "dungeon_delving",
+      "twist": "time flows strangely within the ruin"
     },
     "complication": "A rival faction interferes.",
-    "reward": "1d6",
-    "output": "Missing_Person in Riftmarch: is_the_villain.\nComplication: A rival faction interferes.\nReward Tier: 1d6.\n"
+    "reward": "standard",
+    "output": "Quest Type: Dungeon_Delving\nRegion: Sadri Desert\nTwist: time flows strangely within the ruin\nComplication: A rival faction interferes.\nReward Tier: standard\n"
   }
 }
