@@ -1,6 +1,6 @@
 procgen:
   meta:
-    version: 10
+    version: 12
     world: Etheras
     description: "Procedural generation tables for adventures, settlements, dungeons, factions, and quests in Etheras."
 
@@ -20,6 +20,7 @@ procgen:
       "11+": legendary
 
   tables:
+    # ── REGION ──────────────────────────────────────────────────────────────────
     - id: region
       entries:
         - weight: 4
@@ -35,28 +36,71 @@ procgen:
         - weight: 2
           result: { id: wraith_fortress, label: "Wraith Baroness Wastes" }
 
+    # ── SETTLEMENT TYPE ──────────────────────────────────────────────────────────
     - id: settlement_type
       entries:
-        - weight: 3
+        - weight: 4
           result: { id: village, label: "village" }
-        - weight: 3
+        - weight: 4
           result: { id: town, label: "town" }
         - weight: 3
           result: { id: port_city, label: "port city" }
         - weight: 2
           result: { id: fortress, label: "fortress outpost" }
+        - weight: 2
+          result: { id: desert_tradepost, label: "desert tradepost" }
+        - weight: 2
+          result: { id: forest_outpost, label: "forest outpost" }
+        - weight: 1
+          result: { id: cursed_keep, label: "cursed keep" }
+        - weight: 1
+          result: { id: lakeside_town, label: "lakeside town" }
 
+    # ── SETTLEMENT PROBLEM ───────────────────────────────────────────────────────
     - id: settlement_problem
       entries:
         - weight: 3
-          result: "banditry cutting into caravans"
+          result: "Banditry cutting into caravans."
         - weight: 2
-          result: "monster attacks from nearby ruins"
+          result: "Monster attacks from nearby ruins."
         - weight: 2
-          result: "political tension between factions"
+          result: "Political tension between factions."
         - weight: 1
-          result: "strange Cataclysm echoes warping reality"
+          result: "Strange Cataclysm echoes warping reality."
+        - weight: 2
+          result: "Drought threatening the harvest."
+        - weight: 2
+          result: "A poisoned well that no one will explain."
+        - weight: 2
+          result: "A mercenary company demanding 'protection' fees."
+        - weight: 2
+          result: "Relic thieves stripping the old temple."
+        - weight: 2
+          result: "A plague of nightmares haunting the population."
+        - weight: 2
+          result: "A murder no one will investigate."
+        - weight: 2
+          result: "Children going missing near the old mill."
+        - weight: 2
+          result: "Undead sightings at the edge of town."
+        - weight: 2
+          result: "Two merchant families at the brink of open war."
+        - weight: 2
+          result: "The local garrison has gone silent."
+        - weight: 1
+          result: "An ancient ward is failing and something stirs beneath."
+        - weight: 2
+          result: "A traveling circus brought something dark with it."
+        - weight: 2
+          result: "Flood has cut the trade road to the north."
+        - weight: 1
+          result: "A cursed idol was unearthed and people won't leave their homes."
+        - weight: 2
+          result: "Refugees from the wastes bring desperate rumors."
+        - weight: 1
+          result: "The town watch has been secretly replaced."
 
+    # ── DUNGEON THEME ────────────────────────────────────────────────────────────
     - id: dungeon_theme
       entries:
         - weight: 3
@@ -66,7 +110,7 @@ procgen:
             tags: [temporal, unstable, relic_rich]
         - weight: 3
           result:
-            id: haunted_house
+            id: haunted_noble_house
             name: "Haunted Noble House"
             tags: [haunted, noble, relic_cache]
         - weight: 3
@@ -84,30 +128,187 @@ procgen:
             id: shattered_fortress
             name: "Shattered Fortress"
             tags: [military, cursed, undead]
+        - weight: 2
+          result:
+            id: flooded_vault
+            name: "Flooded Vault"
+            tags: [aquatic, treasure, sealed]
+        - weight: 2
+          result:
+            id: sunken_temple
+            name: "Sunken Temple"
+            tags: [divine, submerged, aberrant]
+        - weight: 2
+          result:
+            id: ossuary
+            name: "The Ossuary"
+            tags: [undead, bone, ancient]
+        - weight: 2
+          result:
+            id: fey_crossing
+            name: "Fey Crossing"
+            tags: [fey, maddening, twilight]
+        - weight: 1
+          result:
+            id: volcanic_lair
+            name: "Volcanic Lair"
+            tags: [fire, elemental, giant]
+        - weight: 1
+          result:
+            id: planar_scar
+            name: "Planar Scar"
+            tags: [dimensional, chaotic, rare]
+        - weight: 2
+          result:
+            id: overgrown_shrine
+            name: "Overgrown Shrine"
+            tags: [nature, druidic, corrupted]
+        - weight: 2
+          result:
+            id: assassin_guild_hideout
+            name: "Assassin Guild Hideout"
+            tags: [urban, trap_heavy, political]
+        - weight: 2
+          result:
+            id: dwarven_forge_complex
+            name: "Dwarven Forge Complex"
+            tags: [construct, mechanical, buried]
+        - weight: 2
+          result:
+            id: sea_cave
+            name: "Sea Cave"
+            tags: [pirate, aquatic, nautical]
+        - weight: 2
+          result:
+            id: cursed_battlefield
+            name: "Cursed Battlefield"
+            tags: [undead, military, ancient_war]
+        - weight: 2
+          result:
+            id: thieves_guild_vault
+            name: "Thieves Guild Vault"
+            tags: [urban, trap_heavy, heist]
+        - weight: 1
+          result:
+            id: aboleth_lair
+            name: "Aboleth Lair"
+            tags: [aberrant, mind_control, deep]
+        - weight: 1
+          result:
+            id: cataclysm_fragment_site
+            name: "Cataclysm Fragment Site"
+            tags: [temporal, reality_warping, legendary]
+        - weight: 2
+          result:
+            id: lost_dwarven_outpost
+            name: "Lost Dwarven Outpost"
+            tags: [construct, cold, buried]
 
+    # ── HOOK TYPES ───────────────────────────────────────────────────────────────
     - id: hook_types
       entries:
         - weight: 3
           result:
             type: monster_hunt
-            twist: "the monster is sapient and driven by revenge"
+            twist: "The monster is sapient and driven by revenge."
         - weight: 3
           result:
             type: escort
-            twist: "the escortee hides a Cataclysm relic"
+            twist: "The escortee is hiding a Cataclysm relic."
         - weight: 2
           result:
             type: dungeon_delving
-            twist: "time flows strangely within the ruin"
+            twist: "Time flows strangely within the ruin."
         - weight: 2
           result:
             type: investigation
-            twist: "multiple factions compete for the same secret"
+            twist: "Multiple factions compete for the same secret."
         - weight: 1
           result:
             type: retrieval
-            twist: "the relic corrupts whoever touches it"
+            twist: "The relic corrupts whoever touches it."
+        - weight: 2
+          result:
+            type: missing_person
+            twist: "The missing person doesn't want to be found."
+        - weight: 2
+          result:
+            type: assassination
+            twist: "The target is innocent; the client is the villain."
+        - weight: 2
+          result:
+            type: siege_defense
+            twist: "The attackers are being magically coerced."
+        - weight: 2
+          result:
+            type: rescue
+            twist: "The captive has made a deal with their captor."
+        - weight: 2
+          result:
+            type: heist
+            twist: "A rival crew is running the same job."
+        - weight: 2
+          result:
+            type: courier
+            twist: "The package is alive and aware."
+        - weight: 2
+          result:
+            type: survey
+            twist: "The land itself is hostile to mapping."
+        - weight: 2
+          result:
+            type: diplomacy
+            twist: "Both sides are secretly already at war."
+        - weight: 2
+          result:
+            type: haunting
+            twist: "The ghost is protecting something worth knowing."
+        - weight: 2
+          result:
+            type: jailbreak
+            twist: "One prisoner was jailed for good reason."
+        - weight: 1
+          result:
+            type: plague_cure
+            twist: "The cure and the disease share the same source."
+        - weight: 2
+          result:
+            type: cult_disruption
+            twist: "The cult has a member the party already trusts."
+        - weight: 1
+          result:
+            type: relic_awakening
+            twist: "The relic chooses its own bearer."
+        - weight: 1
+          result:
+            type: prophecy
+            twist: "The prophecy names one of the party by description."
+        - weight: 2
+          result:
+            type: dead_drop
+            twist: "The handler has been compromised."
+        - weight: 1
+          result:
+            type: artifact_study
+            twist: "The artifact is studying them back."
+        - weight: 2
+          result:
+            type: protect_the_witness
+            twist: "The witness is lying about what they saw."
+        - weight: 2
+          result:
+            type: deception_job
+            twist: "The party is being deceived by the quest giver."
+        - weight: 1
+          result:
+            type: beast_taming
+            twist: "The creature is a transformed person."
+        - weight: 1
+          result:
+            type: frontier_claim
+            twist: "The land is already claimed — by the dead."
 
+    # ── COMPLICATION ─────────────────────────────────────────────────────────────
     - id: complication
       entries:
         - weight: 3
@@ -118,6 +319,590 @@ procgen:
           result: "Supplies are running low faster than expected."
         - weight: 1
           result: "An echo of the Cataclysm erupts mid-mission."
+        - weight: 2
+          result: "A member of the party is recognized — and not welcome here."
+        - weight: 2
+          result: "The quest giver goes silent mid-job."
+        - weight: 2
+          result: "A third faction arrives with their own agenda."
+        - weight: 2
+          result: "The target has already been moved."
+        - weight: 2
+          result: "One of the party's contacts has been compromised."
+        - weight: 1
+          result: "The terrain itself is shifting or corrupted."
+        - weight: 1
+          result: "A traitor within the group is passing information."
+        - weight: 2
+          result: "A local law prohibits what the party needs to do."
+        - weight: 2
+          result: "The mission timer accelerates without warning."
+        - weight: 2
+          result: "Something the party thought was safe turns out to be dangerous."
+        - weight: 2
+          result: "A new clue reframes the entire mission."
+        - weight: 2
+          result: "The enemy knows the party is coming."
+        - weight: 2
+          result: "An old enemy makes a surprise appearance."
+        - weight: 2
+          result: "The safe route is no longer safe."
+        - weight: 1
+          result: "A moral dilemma splits the party's loyalties."
+        - weight: 1
+          result: "The real threat is revealed to be larger than expected."
+
+    # ── NPC PERSONALITY ──────────────────────────────────────────────────────────
+    - id: npc_personality
+      entries:
+        - weight: 3
+          result:
+            archetype: gruff_veteran
+            motivation: "Protect the people who can't protect themselves."
+            speech_quirk: "Speaks in short sentences; never asks twice."
+            secret: "Carries guilt from a battle where cowardice got comrades killed."
+        - weight: 3
+          result:
+            archetype: charming_merchant
+            motivation: "Accumulate enough wealth to retire in comfort."
+            speech_quirk: "Punctuates sentences with exaggerated flattery."
+            secret: "Is deeply in debt to a crime lord."
+        - weight: 2
+          result:
+            archetype: nervous_scholar
+            motivation: "Prove a dangerous theory before someone else does."
+            speech_quirk: "Asks questions instead of making statements."
+            secret: "Knows the theory is already proven — and it's terrifying."
+        - weight: 2
+          result:
+            archetype: weary_priest
+            motivation: "Maintain faith despite growing doubt."
+            speech_quirk: "Quotes scripture awkwardly at odd moments."
+            secret: "Has not prayed sincerely in two years."
+        - weight: 2
+          result:
+            archetype: ambitious_noble
+            motivation: "Gain power before rivals do."
+            speech_quirk: "Uses 'we' to mean 'I'."
+            secret: "Is secretly funding a rebellion."
+        - weight: 2
+          result:
+            archetype: bitter_exile
+            motivation: "Return to a lost homeland."
+            speech_quirk: "Name-drops powerful former connections."
+            secret: "Was exiled for a crime they did commit."
+        - weight: 2
+          result:
+            archetype: jovial_rogue
+            motivation: "Survive and have fun doing it."
+            speech_quirk: "Deflects with jokes under pressure."
+            secret: "Is running from a contract placed on their own head."
+        - weight: 2
+          result:
+            archetype: fanatical_cultist
+            motivation: "Usher in a new age."
+            speech_quirk: "Speaks of outsiders as 'the uninitiated'."
+            secret: "Is beginning to doubt the doctrine."
+        - weight: 2
+          result:
+            archetype: haunted_survivor
+            motivation: "Forget what they witnessed."
+            speech_quirk: "Trails off mid-sentence; stares into the distance."
+            secret: "Is being visited by something from the Cataclysm."
+        - weight: 2
+          result:
+            archetype: calculating_spymaster
+            motivation: "Control every variable."
+            speech_quirk: "Gives only the minimum necessary information."
+            secret: "Genuinely cares about one specific person — and it makes them vulnerable."
+        - weight: 2
+          result:
+            archetype: naive_acolyte
+            motivation: "Do the right thing, whatever it costs."
+            speech_quirk: "Asks clarifying questions about everything."
+            secret: "Has never left their hometown before this mission."
+        - weight: 2
+          result:
+            archetype: territorial_ranger
+            motivation: "Protect the wilderness from civilization."
+            speech_quirk: "Speaks of land as living."
+            secret: "Harbors a deep distrust of magic users."
+        - weight: 2
+          result:
+            archetype: obsessed_collector
+            motivation: "Complete the collection at any price."
+            speech_quirk: "Catalogs everything they see mentally — sometimes aloud."
+            secret: "The collection is cursed."
+        - weight: 2
+          result:
+            archetype: grieving_parent
+            motivation: "Find closure or revenge."
+            speech_quirk: "Shows an old portrait of a lost child often."
+            secret: "The child is not dead."
+        - weight: 2
+          result:
+            archetype: court_jester
+            motivation: "Survive through laughter."
+            speech_quirk: "Never breaks character, even under threat."
+            secret: "Carries information that could topple the local government."
+        - weight: 2
+          result:
+            archetype: retired_assassin
+            motivation: "Live quietly and disturb no one."
+            speech_quirk: "Overly aware of exits and sightlines."
+            secret: "The last job was never truly finished."
+        - weight: 2
+          result:
+            archetype: wandering_herbalist
+            motivation: "Heal and move on."
+            speech_quirk: "Offers food and remedies unprompted."
+            secret: "Is tracking a specific plague from the inside."
+        - weight: 2
+          result:
+            archetype: disgraced_soldier
+            motivation: "Earn back honor."
+            speech_quirk: "Takes any mission without question."
+            secret: "Disobeying the order that disgraced them would have been right."
+        - weight: 1
+          result:
+            archetype: curious_construct
+            motivation: "Understand what emotions are."
+            speech_quirk: "Interprets idioms literally."
+            secret: "Was built to do something they are now refusing to do."
+        - weight: 2
+          result:
+            archetype: sea_captain_turned_landlocked
+            motivation: "Return to the sea."
+            speech_quirk: "Uses excessive nautical metaphors."
+            secret: "Their ship sank because of their fault, not the weather."
+
+    # ── RUMOR ────────────────────────────────────────────────────────────────────
+    - id: rumor
+      entries:
+        - weight: 3
+          result:
+            text: "The blacksmith hasn't slept in three weeks — says something visits at midnight."
+            accurate: false
+        - weight: 3
+          result:
+            text: "A Cataclysm relic was dug up and sold before anyone could identify it."
+            accurate: true
+        - weight: 3
+          result:
+            text: "The lord's personal guard has been doubled. Something spooked him."
+            accurate: true
+        - weight: 3
+          result:
+            text: "There are tunnels under the old market that connect to the harbor."
+            accurate: true
+        - weight: 2
+          result:
+            text: "The river runs red three nights before a disaster. It ran red last night."
+            accurate: false
+        - weight: 2
+          result:
+            text: "A traveler left behind a coin no one could identify. It wasn't from any mint on this continent."
+            accurate: true
+        - weight: 2
+          result:
+            text: "The old healer refuses to treat Cataclysm wounds. Says she's seen what comes after."
+            accurate: true
+        - weight: 3
+          result:
+            text: "There's a bounty out on someone in this town — no one knows who placed it."
+            accurate: true
+        - weight: 2
+          result:
+            text: "The new priest at the temple has no shadow."
+            accurate: false
+        - weight: 2
+          result:
+            text: "The innkeeper keeps a ledger of everyone who passes through. Someone is paying for that information."
+            accurate: true
+        - weight: 2
+          result:
+            text: "Three caravans disappeared on the southern pass last month. The third sent back a warning: 'Don't come after us.'"
+            accurate: true
+        - weight: 2
+          result:
+            text: "A child drew a detailed map of the dungeon ruins — she'd never been there."
+            accurate: false
+        - weight: 2
+          result:
+            text: "People who drink from the town well dream the same dream."
+            accurate: true
+        - weight: 2
+          result:
+            text: "The faction representative in town is not who they claim to be."
+            accurate: true
+        - weight: 2
+          result:
+            text: "Someone is buying up every ward-stone in the region. No one knows why."
+            accurate: true
+        - weight: 2
+          result:
+            text: "A merchant sold a 'lucky charm' that brings misfortune to those around the owner, not the holder."
+            accurate: true
+        - weight: 3
+          result:
+            text: "The forest has been completely quiet for a week. Not even birds."
+            accurate: true
+        - weight: 1
+          result:
+            text: "A man walked into the tavern, ordered nothing, sat for an hour, then left. He had no face."
+            accurate: false
+        - weight: 2
+          result:
+            text: "There's a second entrance to the ruins that the faction doesn't know about."
+            accurate: true
+        - weight: 1
+          result:
+            text: "The stars looked wrong last night — like they'd moved."
+            accurate: true
+
+    # ── MYSTERY CLUE ─────────────────────────────────────────────────────────────
+    - id: mystery_clue
+      entries:
+        - weight: 3
+          result:
+            type: physical
+            clue: "A fresh bootprint in the dust — far too large for a human."
+            implication: "Something large was here recently."
+        - weight: 3
+          result:
+            type: testimonial
+            clue: "A dockworker swears he saw someone enter the warehouse — but no one left."
+            implication: "There is a hidden exit or a means of teleportation."
+        - weight: 2
+          result:
+            type: magical
+            clue: "A zone of magical silence — no spell will function here."
+            implication: "Deliberate warding or Cataclysm relic residue."
+        - weight: 2
+          result:
+            type: documentary
+            clue: "A ledger page torn out, but the impression remains in the next page."
+            implication: "Financial records someone didn't want found."
+        - weight: 2
+          result:
+            type: physical
+            clue: "Claw marks on the stone wall, starting at shoulder height."
+            implication: "The creature was on the ceiling."
+        - weight: 2
+          result:
+            type: testimonial
+            clue: "Two witnesses describe the same stranger, one day apart, fifty miles away."
+            implication: "Fast travel or two people impersonating one."
+        - weight: 2
+          result:
+            type: magical
+            clue: "The candle flame bends toward the sealed door every hour on the hour."
+            implication: "Something is breathing behind it."
+        - weight: 2
+          result:
+            type: documentary
+            clue: "A letter referencing a meeting that no one admits to attending."
+            implication: "A secret coalition is forming."
+        - weight: 2
+          result:
+            type: physical
+            clue: "Sand in the footwear of everyone who arrived from the northern road."
+            implication: "They came from the desert, not the north."
+        - weight: 2
+          result:
+            type: testimonial
+            clue: "The survivor refuses to look anyone in the eye since returning from the ruins."
+            implication: "Saw something that is still watching."
+        - weight: 2
+          result:
+            type: magical
+            clue: "Arcane residue that suggests dimensional travel — or arrival from outside this plane."
+            implication: "Extraplanar involvement."
+        - weight: 2
+          result:
+            type: documentary
+            clue: "A map with one building marked in different ink — added later, hastily."
+            implication: "Someone updated the map after the fact."
+        - weight: 2
+          result:
+            type: physical
+            clue: "A blood smear at waist height on the wall, but the floor beneath is clean."
+            implication: "The body was moved after the fact."
+        - weight: 2
+          result:
+            type: testimonial
+            clue: "The child says the bad man smelled like rain and smoke. It hasn't rained in a month."
+            implication: "Cataclysm echo or dimensional traveler."
+        - weight: 2
+          result:
+            type: magical
+            clue: "A holy symbol that melted — not from heat, but from something else entirely."
+            implication: "Presence of infernal power."
+        - weight: 2
+          result:
+            type: documentary
+            clue: "A deed of property signed by someone who died fifteen years ago."
+            implication: "Forgery or undead."
+        - weight: 2
+          result:
+            type: physical
+            clue: "Ash circles drawn on the floor in three rooms. All point toward the east wall."
+            implication: "Summoning circle alignment."
+        - weight: 2
+          result:
+            type: testimonial
+            clue: "An elderly merchant remembers this exact sequence of events happening thirty years ago."
+            implication: "A cyclical Cataclysm pattern."
+        - weight: 2
+          result:
+            type: magical
+            clue: "Objects in the room are slightly out of phase — pass through them like fog, then solidify."
+            implication: "Temporal instability."
+        - weight: 2
+          result:
+            type: documentary
+            clue: "A name crossed out in three separate documents — all written by different hands."
+            implication: "Someone is being systematically erased."
+
+    # ── WEATHER EVENT ────────────────────────────────────────────────────────────
+    - id: weather_event
+      entries:
+        - weight: 3
+          result:
+            name: "Ashfall"
+            description: "Grey ash drifts from a clear sky. Smells of old fire."
+            mechanical_effect: "Perception (sight) checks at disadvantage; tracks fill in within 1 hour."
+        - weight: 2
+          result:
+            name: "Ley Storm"
+            description: "Arcing purple lightning leaps between metal objects."
+            mechanical_effect: "Random magical effects each round; metal armor gives disadvantage on Stealth."
+        - weight: 2
+          result:
+            name: "Blood Fog"
+            description: "A crimson mist rolls in at dawn."
+            mechanical_effect: "Visibility 30 ft; DC 13 Wis or frightened for 1 minute."
+        - weight: 2
+          result:
+            name: "Sunless Day"
+            description: "The sun simply doesn't rise. Not overcast — absent."
+            mechanical_effect: "Undead ignore sunlight until next dawn; darkvision extended 30 ft."
+        - weight: 3
+          result:
+            name: "Still Air"
+            description: "Not even a whisper of wind."
+            mechanical_effect: "Advantage on Perception (sound); impossible to hide scent."
+        - weight: 2
+          result:
+            name: "Black Rain"
+            description: "Rain that leaves dark stains and tastes of iron."
+            mechanical_effect: "Extinguishes all nonmagical fire; DC 12 Con or poisoned 1 hour."
+        - weight: 2
+          result:
+            name: "Desert Haboob"
+            description: "A wall of sand 200 feet tall rolling in from the south."
+            mechanical_effect: "Sadri/Iuned only; total obscurement; shelter or gain 1d4 exhaustion."
+        - weight: 2
+          result:
+            name: "Glitterhold Bloom"
+            description: "The forest exhales luminescent spores at dusk."
+            mechanical_effect: "Forest only; beasts become friendly 1d4 hours; darkvision unreliable."
+        - weight: 2
+          result:
+            name: "Lake Surge"
+            description: "Dagger Depths suddenly rises five feet."
+            mechanical_effect: "Dagger Depths only; shoreline routes flooded; swimming DC +4."
+        - weight: 1
+          result:
+            name: "Cataclysm Tremor"
+            description: "The ground pulses once, slowly, like a heartbeat."
+            mechanical_effect: "All Concentration saves DC 12 for next hour; Cataclysm relics vibrate faintly."
+        - weight: 2
+          result:
+            name: "Frost Snap"
+            description: "Temperature drops 40 degrees in under an hour."
+            mechanical_effect: "Exhaustion track begins for unprotected characters; water sources freeze."
+        - weight: 2
+          result:
+            name: "Scorching Wind"
+            description: "Hot dry wind strips moisture from everything."
+            mechanical_effect: "Sadri/Iuned; water rations halved; disadvantage on Con saves vs exhaustion."
+        - weight: 2
+          result:
+            name: "Thunderhead"
+            description: "A storm that pauses — then hits all at once."
+            mechanical_effect: "Characters in the open take 1d4 lightning (DC 13 Dex negates); lasts 2 hours."
+        - weight: 2
+          result:
+            name: "Crimson Aurora"
+            description: "Northern lights, red, visible even at noon."
+            mechanical_effect: "Wraith Fortress region; undead act with unusual purpose; diviners get visions."
+        - weight: 2
+          result:
+            name: "Tide of Voices"
+            description: "A sound like distant chanting that no one can locate."
+            mechanical_effect: "Perception at disadvantage; Insight at advantage."
+        - weight: 2
+          result:
+            name: "Pilgrim Wind"
+            description: "A warm wind that carries the smell of incense."
+            mechanical_effect: "Church holy day: healing spells restore +1d4; sacred sites glow."
+        - weight: 2
+          result:
+            name: "Mirror Ice"
+            description: "A thin layer of ice that shows reflections of other places."
+            mechanical_effect: "Glitterhold/Dagger Depths; reflections show the past."
+        - weight: 2
+          result:
+            name: "Starfall"
+            description: "A cascade of small meteors, none harmful."
+            mechanical_effect: "Arcane casters gain +1 spell slot until dawn; meteors may carry relic dust."
+        - weight: 2
+          result:
+            name: "Witchlight"
+            description: "Green fire burns wherever light already burns."
+            mechanical_effect: "Conjuration/divination at advantage; fire spells cast at +1 level."
+        - weight: 1
+          result:
+            name: "Dead Calm"
+            description: "Absolute stillness — no wind, no birdsong, no insect sound."
+            mechanical_effect: "Stealth advantage for all; Perception disadvantage; something is about to happen."
+
+    # ── MAGIC ITEM QUIRK ─────────────────────────────────────────────────────────
+    - id: magic_item_quirk
+      entries:
+        - weight: 2
+          result:
+            quirk: "Whispers names."
+            effect: "The item murmurs the true name of whoever is near. Insight advantage against holder; unsettles undead."
+        - weight: 2
+          result:
+            quirk: "Refuses blood."
+            effect: "The weapon will not draw blood from creatures who are crying."
+        - weight: 2
+          result:
+            quirk: "Gets heavier near lies."
+            effect: "Gains 1 lb per lie spoken within 30 feet; eventually unwieldy."
+        - weight: 3
+          result:
+            quirk: "Warm near danger."
+            effect: "+1 to Initiative once per encounter; item grows warm 1 minute before combat."
+        - weight: 2
+          result:
+            quirk: "Remembers owners."
+            effect: "Previous owner's initials appear at dawn. Past memories accessible via Identify."
+        - weight: 2
+          result:
+            quirk: "Sings in darkness."
+            effect: "Hums an old hymn in total darkness. Cannot sneak without Silence spell."
+        - weight: 2
+          result:
+            quirk: "Loves birds."
+            effect: "Birds flock to the bearer. Advantage on Animal Handling (birds); druids react favorably."
+        - weight: 2
+          result:
+            quirk: "Counts kills."
+            effect: "A tally mark appears per kill. NPC reactions worsen when count exceeds 10."
+        - weight: 2
+          result:
+            quirk: "Weeps at death."
+            effect: "Produces one clear drop when a creature dies within 60 feet. Detects death passively."
+        - weight: 2
+          result:
+            quirk: "Hates fire."
+            effect: "Disadvantage on fire attack rolls; advantage on saves against fire."
+        - weight: 2
+          result:
+            quirk: "Copies once."
+            effect: "Stores the first spell cast through it. Release as bonus action; resets at dawn."
+        - weight: 2
+          result:
+            quirk: "Visible in dreams."
+            effect: "Creatures who see the item may encounter it in their next dream."
+        - weight: 3
+          result:
+            quirk: "Remembers north."
+            effect: "Always points toward magnetic north. Navigation advantage; ignores illusion directions."
+        - weight: 2
+          result:
+            quirk: "Feeds on fear."
+            effect: "+1d4 damage when any frightened creature is within 30 ft."
+        - weight: 2
+          result:
+            quirk: "Cannot be hidden."
+            effect: "Always reflects light even in total darkness. Impossible to conceal on the body."
+        - weight: 2
+          result:
+            quirk: "Smells like the sea."
+            effect: "Sailors and coastal NPCs trust the bearer instinctively; undead hesitate near it."
+        - weight: 2
+          result:
+            quirk: "Forgets you."
+            effect: "Each dawn the item needs 1 minute of silent re-attunement (free)."
+        - weight: 2
+          result:
+            quirk: "Resonates with grief."
+            effect: "Vibrates gently when touched by someone who has recently lost a loved one."
+        - weight: 2
+          result:
+            quirk: "Draws insects."
+            effect: "Disadvantage on Persuasion in formal settings; advantage on Survival (tracking)."
+        - weight: 2
+          result:
+            quirk: "Perfect pitch."
+            effect: "Produces one perfect musical tone when tapped. Bardic inspiration has advantage in acoustic spaces."
+
+    # ── ENCOUNTER MIX ────────────────────────────────────────────────────────────
+    - id: encounter_mix
+      entries:
+        - weight: 3
+          result:
+            type: combat_heavy
+            combat: 3
+            social: 1
+            puzzle: 1
+            trap: 1
+            note: "Good for dungeon delving and monster hunts."
+        - weight: 3
+          result:
+            type: investigation
+            combat: 1
+            social: 3
+            puzzle: 2
+            trap: 0
+            note: "Good for mystery and political quests."
+        - weight: 2
+          result:
+            type: exploration
+            combat: 2
+            social: 1
+            puzzle: 2
+            trap: 1
+            note: "Good for ruins and uncharted territory."
+        - weight: 2
+          result:
+            type: trap_gauntlet
+            combat: 2
+            social: 0
+            puzzle: 1
+            trap: 3
+            note: "Good for heist and thieves-guild dungeons."
+        - weight: 1
+          result:
+            type: social_siege
+            combat: 3
+            social: 2
+            puzzle: 0
+            trap: 0
+            note: "Good for faction conflicts and siege defense."
+        - weight: 1
+          result:
+            type: horror
+            combat: 2
+            social: 1
+            puzzle: 1
+            trap: 2
+            note: "Good for haunted locations and Cataclysm sites."
 
   generators:
     settlement:
@@ -151,3 +936,33 @@ procgen:
             Complication: {{complication}}
             Reward Tier: {{reward}}
 
+    one_shot:
+      steps:
+        - table: region
+        - table: hook_types
+        - table: complication
+        - table: settlement_type
+        - table: settlement_problem
+        - table: dungeon_theme
+        - table: npc_personality
+        - table: rumor
+        - table: weather_event
+        - table: encounter_mix
+        - table: magic_item_quirk
+        - table: mystery_clue
+        - bind: { reward: treasure_tier_by_cr(cr_guess) }
+
+    session_zero:
+      steps:
+        - table: region
+        - table: hook_types
+        - table: dungeon_theme
+        - table: npc_personality
+        - table: rumor
+        - output_template: |
+            # Session Zero Pitch
+            **Region:** {{region.label}}
+            **Quest Hook:** {{hook.type|title}} — {{hook.twist}}
+            **Location:** {{dungeon_theme.name}} ({{dungeon_theme.tags}})
+            **Quest Giver Archetype:** {{npc.archetype}} — {{npc.motivation}}
+            **Opening Rumor:** {{rumor.text}}

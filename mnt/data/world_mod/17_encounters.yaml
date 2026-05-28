@@ -6,6 +6,9 @@ encounters:
     sadri_desert:
       day:   {easy: 30, medium: 70, hard: 110, deadly: 160}
       night: {easy: 40, medium: 80, hard: 130, deadly: 190}
+    iuned:
+      day:   {easy: 35, medium: 75, hard: 115, deadly: 165}
+      night: {easy: 45, medium: 85, hard: 130, deadly: 185}
     dagger_depths:
       day:   {easy: 35, medium: 75, hard: 120, deadly: 170}
       night: {easy: 45, medium: 90, hard: 135, deadly: 190}
@@ -44,6 +47,21 @@ encounters:
         - weight: 1
           creature: sand_wraith
           cr: 4
+    - region: iuned
+      biome: dry_steppe
+      entries:
+        - weight: 3
+          creature: bandits
+          cr: 0.5
+        - weight: 2
+          creature: orc_warband
+          cr: 1
+        - weight: 2
+          creature: hobgoblin
+          cr: 0.5
+        - weight: 1
+          creature: manticore
+          cr: 3
     - region: dagger_depths
       biome: lake_and_ruins
       entries:
@@ -89,3 +107,138 @@ encounters:
         - weight: 1
           creature: death_knight
           cr: 10
+
+  # ── LIVE EVENTS (d20 tables per region — roll mid-session for drama) ──────────
+  # Roll a d20, read the matching entry number, drop it into the scene.
+  live_events:
+    ackdon:
+      - "A crate at the docks splits open — something small and fast escapes into the alleys."
+      - "A foreign sailor claims someone stole his memories at an inn last night."
+      - "The harbor bell rings three times — the warning signal for a smuggler's sighting."
+      - "A merchant's bodyguards refuse to guard him without explanation and walk away."
+      - "A map is slipped under the party's door. No signature. One route is highlighted in blood."
+      - "The Grace Market falls eerily silent for exactly one minute at midday."
+      - "A relic dealer is found dead — apparently of fright, inventory perfectly intact."
+      - "Three city watch members are escorting a blindfolded man with noble insignia."
+      - "Someone is posting notices offering coin for information about the party."
+      - "A child wordlessly hands over a sealed letter and runs away."
+      - "The lighthouse flashes a strange pattern — not a recognized code."
+      - "A ship arrives flying no flag and docks without customs inspection."
+      - "The Cursed Candle's sign has been replaced with one that reads only: 'DO NOT ENTER'."
+      - "A pickpocket tries to steal from the party — and is being chased by someone else."
+      - "An old sailor collapses, muttering 'it's happening again' before losing consciousness."
+      - "Stonekeg Provisions is locked with no explanation — Brodrik is always open by dawn."
+      - "A trade consortium agent approaches to 'ask a few questions' about the party's business."
+      - "A painting in the market shows the town skyline — but the sky in the painting shows something that isn't there."
+      - "A ghost walks through the market, apparently unaware it is dead."
+      - "Rain falls — but only in a thirty-foot circle around a specific building."
+
+    sadri_desert:
+      - "A sandstorm rolls in — visibility drops to 30 feet for the next hour."
+      - "Tracks in the sand: three sets heading toward the ruins, none returning."
+      - "A merchant caravan waves the party down — their scout went ahead and never came back."
+      - "A pillar of smoke rises on the horizon, too small for a camp fire."
+      - "A dying man is found clutching a relic shard. He says only one word: 'below'."
+      - "At sunset, every shadow points the wrong direction."
+      - "A nomad camp ahead is too quiet — no motion, no fire, no sound."
+      - "The sand gives way to black glass in a perfect circle, forty feet across."
+      - "A singing sound at night comes from one specific dune. It knows the party's names."
+      - "A desert oracle approaches and offers one true answer for one secret."
+      - "Mounts become skittish and refuse to continue in a specific direction."
+      - "A trail of coins leads off the main path — each from a different era."
+      - "A mirage of a city appears, identical to a city the party knows — but on fire."
+      - "The temperature drops twenty degrees in ten minutes with no meteorological cause."
+      - "A lone rider approaches at speed, passes without acknowledgment, and vanishes."
+      - "A group of cultists completing a ritual stop and stare as the party approaches."
+      - "A scorpion the size of a dog watches the party from a distance and does not flee."
+      - "The stars rearrange slightly. A DC 14 Arcana reveals the new constellation spells a word."
+      - "An oasis appears — but the water has no reflection."
+      - "A sealed door stands alone in the open desert. It is locked. It is newer than the sand."
+
+    iuned:
+      - "A wanted poster bears a description uncomfortably similar to one party member."
+      - "A local militia has set up an unauthorized checkpoint on the road."
+      - "Two feuding merchant families are seconds from open brawl in the street."
+      - "A runner collapses mid-delivery — the message is addressed to no one."
+      - "Fresh graves at the edge of town — unmarked, dug in a hurry."
+      - "The blacksmith refuses to shoe horses toward the east road. Won't say why."
+      - "A garrison soldier is found asleep at their post, impossible to wake."
+      - "A caravan from the south is turned away from the gates for 'quarantine' — the passengers seem fine."
+      - "An old fortification map is being sold by a street child — it shows tunnels under the city."
+      - "Smoke from the watchtower's direction — the guards haven't signaled all day."
+      - "A robed figure in the square preaches the coming of a 'second Cataclysm'."
+      - "Three travelers arrived from the east one week ago. No one has seen them leave their inn."
+      - "A military dispatch rider is ambushed in sight of the city walls — by other soldiers."
+      - "The frontier market's prices have doubled overnight — someone bought out all provisions."
+      - "A magistrate is heard arguing through a wall — very afraid of whoever is on the other side."
+      - "A local child found a sword buried in the road. It is in better condition than it should be by centuries."
+      - "The frontier patrol hasn't returned from its scheduled morning circuit."
+      - "A fire breaks out in a warehouse that should have been empty."
+      - "The local Marshal appears to be following the party without approaching."
+      - "Refugees arrived claiming a gate to 'somewhere else' opened on the road behind them."
+
+    dagger_depths:
+      - "Something very large passes beneath the dock's shadow — visible through the clear water."
+      - "Old Mira Lakewatch refuses her ferry run without explanation."
+      - "The nets came up full of scales — nothing else — for three days running."
+      - "A fisherman is found floating face-down but perfectly preserved, as if frozen in time."
+      - "A sealed stone capsule washes ashore — inside is a message in a language 300 years dead."
+      - "A rowboat returns to dock on its own. No one on board. Oars still moving."
+      - "The lake fog forms shapes tonight — shapes that move against the wind."
+      - "Two children swear they heard singing from under the water and followed it to the edge."
+      - "An archaeologist's camp has been abandoned mid-meal — food still warm."
+      - "A strange light pulses deep below the surface every thirteen seconds."
+      - "The water near the old ruins is ten degrees warmer than the rest of the lake."
+      - "A fisherman insists he caught the same fish three times today — same wound, same size."
+      - "A section of shoreline has no footprints despite heavy recent foot traffic."
+      - "The wight that supposedly guards the lake ruins is wandering in town — confused."
+      - "Three hobgoblin war canoes cross the lake — flying a white flag."
+      - "A building near the water collapses into a perfectly dry tunnel that descends into darkness."
+      - "Someone has rebuilt the dock markers in a pattern that matches a ritual diagram."
+      - "The goblin traders who camp the eastern shore have packed up and fled overnight."
+      - "An ogre is spotted wading in the shallows — it appears to be weeping."
+      - "A research expedition camp is found intact — every person, and every pair of shoes, is gone."
+
+    glitterhold_forest:
+      - "The trees are singing. DC 12 Wisdom save or feel compelled to follow the sound for 1 hour."
+      - "A path that wasn't there yesterday leads to a clearing not on any map."
+      - "Every bird in the canopy faces the same direction simultaneously — then resumes normal behavior."
+      - "A stone marker bears fresh carving: today's date, in a style centuries old."
+      - "Selthir Moonbough passes the party without acknowledgment — looking hunted."
+      - "Phosphorescent mushrooms begin glowing in a trail that leads deeper into the forest."
+      - "A bear sits in the middle of the path. It appears to be waiting. It has a key around its neck."
+      - "The forest grows completely silent for three minutes. Everything stops. Then resumes."
+      - "A fey creature offers to trade 'something you don't know you have' for safe passage."
+      - "A pyre of wildflowers arranged in a spiral — still warm, no tracks around it."
+      - "An elven outpost flag hangs at half-mast."
+      - "The canopy parts overhead to show a perfect circle of sky — no stars visible."
+      - "A tree has been carved with a map. One location marked with an X: 'do not open'."
+      - "A wolf pack flanks the party for an hour, maintaining perfect distance."
+      - "Something stripped the bark from twenty trees in a perfect line heading north."
+      - "An old campsite contains equipment belonging to the party — equipment they have never owned."
+      - "A moss-covered door stands between two ancient trees. A light is visible beneath the door."
+      - "Two dryads are arguing — one wants to let the party pass, the other does not."
+      - "Rotten wood has been shaped into crude icons of a god none of the party recognizes."
+      - "The forest path loops. The party passes the same fallen log three times in different directions."
+
+    wraith_fortress:
+      - "A skeleton is found kneeling mid-prayer at the roadside — crumbled but intact."
+      - "The Cult of Ukobach's signal fires burn tonight — all five simultaneously."
+      - "A death knight's visor tracks the party's movement from two hundred feet away, then turns away."
+      - "The ground beneath the party's feet is warm. Not geothermal — warm like skin."
+      - "A soldier's ghost marches patrol routes from a war that ended a century ago."
+      - "Ravens land on the party's packs and pluck out any holy symbols left in the open."
+      - "A section of wall shifts to show a face pressed against the stone from inside — then nothing."
+      - "A ward charm meant to repel undead begins dissolving on its own."
+      - "The Wraith Baroness' banner hangs over a position it didn't occupy yesterday."
+      - "A revenant weeps over a name carved into stone — its own name."
+      - "The mist here has a color. It is slightly too green."
+      - "An undead creature approaches with hands raised — it is trying to surrender."
+      - "Necrotic residue covers a path, recent, leading deeper into the wastes."
+      - "A crack in the earth breathes cold air that smells of old crypts."
+      - "Soldiers wrapped in cloaks in a camp with no fire — motionless, but not dead."
+      - "A single torchlight is visible from an abandoned tower. No one is supposed to be there."
+      - "Three wights are playing cards they clearly learned in life. They haven't noticed the party."
+      - "High Ember Adept Kharzul is spotted at a distance, speaking to someone invisible."
+      - "A sealed iron box lies in the road. It has no lock. It will not open."
+      - "The Wraith Baroness' fortress gate opens on its own. Just once. Then closes."
